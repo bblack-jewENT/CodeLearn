@@ -30,47 +30,95 @@ const Dashboard = () => {
     courses.length;
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Your Learning Dashboard</h1>
+    <div className="container">
+      <h1
+        style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}
+      >
+        Your Learning Dashboard
+      </h1>
 
       {/* Overall Progress */}
-      <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Overall Progress</h2>
-        <div className="w-full bg-gray-200 rounded-full h-4">
+      <div className="card" style={{ marginBottom: "2rem" }}>
+        <h2
+          style={{
+            fontSize: "1.3rem",
+            fontWeight: "bold",
+            marginBottom: "1rem",
+          }}
+        >
+          Overall Progress
+        </h2>
+        <div
+          style={{
+            width: "100%",
+            background: "#eee",
+            borderRadius: "8px",
+            height: "16px",
+          }}
+        >
           <div
-            className="bg-blue-600 h-4 rounded-full"
-            style={{ width: `${totalProgress}%` }}
+            style={{
+              background: "#2563eb",
+              height: "16px",
+              borderRadius: "8px",
+              width: `${totalProgress}%`,
+            }}
           ></div>
         </div>
-        <p className="mt-2 text-gray-600">
+        <p style={{ marginTop: "0.5rem", color: "#666" }}>
           {Math.round(totalProgress)}% Complete
         </p>
       </div>
 
       {/* Course Progress */}
-      <div className="grid md:grid-cols-2 gap-6">
+      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
         {courses.map((course) => {
           const courseProgress = getCourseProgress(course.id);
           return (
-            <div key={course.id} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">{course.title}</h3>
-              <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
+            <div key={course.id} className="card" style={{ minWidth: "250px" }}>
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "bold",
+                  marginBottom: "1rem",
+                }}
+              >
+                {course.title}
+              </h3>
+              <div
+                style={{
+                  width: "100%",
+                  background: "#eee",
+                  borderRadius: "8px",
+                  height: "12px",
+                  marginBottom: "0.5rem",
+                }}
+              >
                 <div
-                  className="bg-green-600 h-3 rounded-full"
-                  style={{ width: `${courseProgress}%` }}
+                  style={{
+                    background: "#22c55e",
+                    height: "12px",
+                    borderRadius: "8px",
+                    width: `${courseProgress}%`,
+                  }}
                 ></div>
               </div>
-              <p className="text-sm text-gray-600">
+              <p style={{ fontSize: "0.95rem", color: "#666" }}>
                 {courseProgress}% Complete
               </p>
 
               {/* Quiz Scores */}
-              <div className="mt-4">
-                <h4 className="font-semibold mb-2">Quiz Scores:</h4>
+              <div style={{ marginTop: "1rem" }}>
+                <h4 style={{ fontWeight: "bold", marginBottom: "0.5rem" }}>
+                  Quiz Scores:
+                </h4>
                 {Object.entries(progress)
                   .filter(([key]) => key.startsWith(`quiz-${course.id}-`))
                   .map(([key, value]) => (
-                    <div key={key} className="text-sm text-gray-600">
+                    <div
+                      key={key}
+                      style={{ fontSize: "0.95rem", color: "#666" }}
+                    >
                       Lesson {key.split("-")[2]}: {value.score}/{value.total}
                     </div>
                   ))}

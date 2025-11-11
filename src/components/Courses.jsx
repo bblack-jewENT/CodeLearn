@@ -110,27 +110,45 @@ const Courses = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Our Courses</h1>
+    <div className="container">
+      <h1
+        style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}
+      >
+        Our Courses
+      </h1>
 
       {/* Search Bar */}
-      <div className="mb-8">
+      <div style={{ marginBottom: "2rem" }}>
         <input
           type="text"
           placeholder="Search courses..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          style={{
+            width: "100%",
+            padding: "0.75rem",
+            border: "1px solid #ccc",
+            borderRadius: "8px",
+            fontSize: "1rem",
+          }}
         />
       </div>
 
       {/* Courses Grid */}
-      <div className="grid md:grid-cols-2 gap-6">
+      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
         {filteredCourses.map((course) => (
-          <div key={course.id} className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-2">{course.title}</h2>
-            <p className="text-gray-600 mb-4">{course.description}</p>
-            <div className="space-y-2">
+          <div key={course.id} className="card" style={{ minWidth: "250px" }}>
+            <h2
+              style={{
+                fontSize: "1.3rem",
+                fontWeight: "bold",
+                marginBottom: "0.5rem",
+              }}
+            >
+              {course.title}
+            </h2>
+            <p style={{ marginBottom: "1rem" }}>{course.description}</p>
+            <div>
               {course.lessons.map((lesson) => (
                 <LessonCard
                   key={lesson.id}
