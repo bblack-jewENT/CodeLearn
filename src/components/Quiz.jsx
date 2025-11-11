@@ -134,18 +134,28 @@ const Quiz = () => {
   };
 
   if (questions.length === 0) {
-    return <div className="container mx-auto px-4 py-8">Loading quiz...</div>;
+    return <div className="container">Loading quiz...</div>;
   }
 
   if (showResult) {
     return (
-      <div className="container mx-auto px-4 py-8 max-w-2xl">
-        <h1 className="text-3xl font-bold mb-8">Quiz Results</h1>
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <h2 className="text-2xl font-semibold mb-4">
+      <div className="container" style={{ maxWidth: "600px" }}>
+        <h1
+          style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}
+        >
+          Quiz Results
+        </h1>
+        <div className="card" style={{ textAlign: "center" }}>
+          <h2
+            style={{
+              fontSize: "1.3rem",
+              fontWeight: "bold",
+              marginBottom: "1rem",
+            }}
+          >
             Your Score: {score}/{questions.length}
           </h2>
-          <p className="text-lg mb-6">
+          <p style={{ fontSize: "1.1rem", marginBottom: "1.5rem" }}>
             {score === questions.length
               ? "Perfect! 🎉"
               : score > questions.length / 2
@@ -154,7 +164,8 @@ const Quiz = () => {
           </p>
           <button
             onClick={resetQuiz}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700"
+            className="btn"
+            style={{ marginTop: "1rem" }}
           >
             Retake Quiz
           </button>
@@ -164,27 +175,47 @@ const Quiz = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-2xl">
-      <h1 className="text-3xl font-bold mb-8">Quiz</h1>
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <div className="mb-4">
-          <span className="text-sm text-gray-600">
+    <div className="container" style={{ maxWidth: "600px" }}>
+      <h1
+        style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}
+      >
+        Quiz
+      </h1>
+      <div className="card">
+        <div style={{ marginBottom: "1rem" }}>
+          <span style={{ fontSize: "0.95rem", color: "#666" }}>
             Question {currentQuestion + 1} of {questions.length}
           </span>
         </div>
-        <h2 className="text-xl font-semibold mb-6">
+        <h2
+          style={{
+            fontSize: "1.1rem",
+            fontWeight: "bold",
+            marginBottom: "1.5rem",
+          }}
+        >
           {questions[currentQuestion].question}
         </h2>
-        <div className="space-y-3">
+        <div>
           {questions[currentQuestion].options.map((option, index) => (
             <button
               key={index}
               onClick={() => handleAnswerSelect(index)}
-              className={`w-full text-left p-3 rounded-lg border ${
-                selectedAnswer === index
-                  ? "border-blue-500 bg-blue-50"
-                  : "border-gray-300 hover:border-gray-400"
-              }`}
+              style={{
+                width: "100%",
+                textAlign: "left",
+                padding: "0.75rem",
+                borderRadius: "8px",
+                border:
+                  selectedAnswer === index
+                    ? "2px solid #2563eb"
+                    : "1px solid #ccc",
+                background: selectedAnswer === index ? "#e0eaff" : "#fff",
+                marginBottom: "0.5rem",
+                fontSize: "1rem",
+                cursor: "pointer",
+                transition: "border-color 0.2s",
+              }}
             >
               {option}
             </button>
@@ -193,7 +224,12 @@ const Quiz = () => {
         <button
           onClick={handleNext}
           disabled={selectedAnswer === null}
-          className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="btn"
+          style={{
+            marginTop: "1.5rem",
+            background: selectedAnswer === null ? "#ccc" : "#2563eb",
+            cursor: selectedAnswer === null ? "not-allowed" : "pointer",
+          }}
         >
           {currentQuestion === questions.length - 1
             ? "Finish Quiz"
