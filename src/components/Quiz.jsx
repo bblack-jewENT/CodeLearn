@@ -10,6 +10,42 @@ const Quiz = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [answers, setAnswers] = useState([]);
 
+  // Mock lesson data
+  const lessonData = {
+    1: {
+      title: "HTML Basics",
+      history:
+        "HTML (HyperText Markup Language) was created by Tim Berners-Lee in 1991 as part of the World Wide Web project at CERN. It has evolved significantly over the years, from HTML 1.0 in 1993 to the modern HTML5 standard adopted in 2014. HTML provides the basic structure and semantic meaning to web pages, allowing browsers to display content in a meaningful way.",
+      overview:
+        "In this lesson, we'll explore the fundamentals of HTML including tags, elements, attributes, and document structure. The quiz will test your understanding of common HTML tags, their purposes, and how they work together to create web pages.",
+      videoId: "UB1O30fR-EE",
+    },
+    2: {
+      title: "CSS Styling",
+      history:
+        "CSS was first proposed by Håkon Wium Lie in 1994 while working with Tim Berners-Lee at CERN. The first CSS specification became a W3C recommendation in 1996. CSS has evolved through multiple versions, with CSS3 introducing advanced features like animations, transitions, and responsive design capabilities.",
+      overview:
+        "This lesson covers CSS syntax, selectors, properties, and the box model. You'll learn how to style HTML elements and create visually appealing web pages. The quiz will focus on CSS selectors, properties, and common styling techniques.",
+      videoId: "yfoY53QXEnI",
+    },
+    3: {
+      title: "JavaScript Fundamentals",
+      history:
+        "JavaScript was created by Brendan Eich in 1995 while working at Netscape Communications. Originally called Mocha, then LiveScript, it was renamed JavaScript to capitalize on Java's popularity. ECMAScript, the standardized version, was first released in 1997 and continues to evolve with annual updates.",
+      overview:
+        "We'll cover JavaScript basics including variables, data types, functions, and control structures. The quiz will test your knowledge of JavaScript syntax, data types, functions, and basic programming concepts.",
+      videoId: "W6NZfCO5SIk",
+    },
+    4: {
+      title: "React Components",
+      history:
+        "React was created by Facebook (now Meta) in 2013 and open-sourced later that year. Developed by Jordan Walke, it was initially used internally at Facebook before becoming one of the most popular JavaScript libraries. React introduced component-based architecture and revolutionized frontend development.",
+      overview:
+        "This lesson introduces React concepts including components, JSX, props, state, and hooks. The quiz will cover React fundamentals, component lifecycle, state management, and common React patterns.",
+      videoId: "Ke90Tje7VS0",
+    },
+  };
+
   // Mock quiz data - in a real app, this would come from an API
   const quizData = {
     1: [
@@ -198,6 +234,9 @@ const Quiz = () => {
     setAnswers(new Array(courseQuestions.length).fill(null));
   }, [courseId]);
 
+  // Show lesson first, then quiz after button click
+  const [showQuiz, setShowQuiz] = useState(false);
+
   const handleAnswerSelect = (answerIndex) => {
     setSelectedAnswer(answerIndex);
   };
@@ -237,6 +276,99 @@ const Quiz = () => {
     setSelectedAnswer(null);
     setAnswers(new Array(questions.length).fill(null));
   };
+
+  if (!showQuiz) {
+    const lesson = lessonData[courseId];
+    if (!lesson) {
+      return <div className="container">Loading lesson...</div>;
+    }
+    return (
+      <div className="container" style={{ maxWidth: "800px" }}>
+        <h1
+          style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}
+        >
+          {lesson.title}
+        </h1>
+        <div className="card" style={{ marginBottom: "2rem" }}>
+          <h2
+            style={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              marginBottom: "1rem",
+            }}
+          >
+            History
+          </h2>
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.6",
+              marginBottom: "2rem",
+            }}
+          >
+            {lesson.history}
+          </p>
+        </div>
+        <div className="card" style={{ marginBottom: "2rem" }}>
+          <h2
+            style={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              marginBottom: "1rem",
+            }}
+          >
+            What You'll Learn
+          </h2>
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.6",
+              marginBottom: "2rem",
+            }}
+          >
+            {lesson.overview}
+          </p>
+        </div>
+        <div className="card" style={{ marginBottom: "2rem" }}>
+          <h2
+            style={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              marginBottom: "1rem",
+            }}
+          >
+            Video Tutorial
+          </h2>
+          <div
+            style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${lesson.videoId}`}
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                borderRadius: "8px",
+              }}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Tutorial Video"
+            />
+          </div>
+        </div>
+        <button
+          onClick={() => setShowQuiz(true)}
+          className="btn"
+          style={{ width: "100%", padding: "1rem", fontSize: "1.1rem" }}
+        >
+          Mark Done
+        </button>
+      </div>
+    );
+  }
 
   if (questions.length === 0) {
     return <div className="container">Loading quiz...</div>;
