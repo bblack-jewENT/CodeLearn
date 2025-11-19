@@ -23,7 +23,7 @@ const Home = () => {
               marginBottom: "1rem",
             }}
           >
-            Welcome to CodeLearn
+            Welcome to CourseCode
           </h1>
           <p style={{ fontSize: "1.25rem", marginBottom: "2rem" }}>
             Learn web development basics through interactive tutorials and
@@ -50,7 +50,7 @@ const Home = () => {
               marginBottom: "2rem",
             }}
           >
-            About CodeLearn
+            About CourseCode
           </h2>
           <p
             style={{
@@ -60,7 +60,7 @@ const Home = () => {
               margin: "0 auto",
             }}
           >
-            CodeLearn is your gateway to mastering web development. We offer
+            CourseCode is your gateway to mastering web development. We offer
             beginner-friendly courses in HTML, CSS, JavaScript, and React,
             complete with interactive lessons and quizzes to track your
             progress.

@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
-        CodeLearn
+        CourseCode
       </Link>
       <div className="container">
         <div style={{ marginRight: "35px" }}>
