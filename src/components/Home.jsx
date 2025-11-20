@@ -28,9 +28,9 @@ const Home = () => {
       {/* Hero Section */}
       <section
         style={{
-          backgroundImage: "url('src/img/college-students.jpg')",
+          backgroundImage: "url('src/img/college-students1.jpg')",
           color: "#fff",
-          padding: "8rem 0",
+          padding: "10rem 0",
           marginTop: "1.3rem",
           marginRight: "0.5px",
           marginLeft: "-8px",
