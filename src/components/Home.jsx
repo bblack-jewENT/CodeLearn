@@ -1,6 +1,28 @@
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 const Home = () => {
+  const aboutRef = useRef();
+  const coursesRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (aboutRef.current) observer.observe(aboutRef.current);
+    if (coursesRef.current) observer.observe(coursesRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
@@ -30,17 +52,18 @@ const Home = () => {
             Learn web development basics through interactive tutorials and
             quizzes
           </p>
-          <Link
-            to="/courses"
-            className="btn"
-          >
+          <Link to="/courses" className="btn">
             Start Learning Now
           </Link>
         </div>
       </section>
 
       {/* About Section */}
-      <section style={{ padding: "3rem 0" }}>
+      <section
+        ref={aboutRef}
+        className="animate-on-scroll"
+        style={{ padding: "3rem 0" }}
+      >
         <div className="container">
           <h2
             style={{
@@ -69,7 +92,11 @@ const Home = () => {
       </section>
 
       {/* Courses Preview */}
-      <section style={{ background: "#fff", padding: "3rem 0" }}>
+      <section
+        ref={coursesRef}
+        className="animate-on-scroll"
+        style={{ background: "#fff", padding: "3rem 0" }}
+      >
         <div className="container">
           <h2
             style={{
