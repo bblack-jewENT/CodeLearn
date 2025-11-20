@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { GraduationCap } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -19,7 +20,8 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <Link to="/" className="logo">
+      <GraduationCap />
+      <Link to="/" className="logo" style={{ marginLeft: "0.5rem" }}>
         CourseCode
       </Link>
       <div className="container">
