@@ -78,6 +78,7 @@ body {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
 .social-icons:hover {
   transform: scale(1.15);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -96,8 +97,15 @@ body {
   margin-bottom: 1rem;
 }
 
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease-in-out;
+  transform: translateY(-5px);
+}
+
 .btn {
   background: #207985;
+  text-decoration: none;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -108,10 +116,12 @@ body {
 }
 .btn:hover {
   background: #1741a3;
+  text-decoration: none;
 }
 
 .contact-btn {
   background: #2a8a4dff;
+  text-decoration: none;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -123,6 +133,7 @@ body {
 
 .contact-btn:hover {
   background: #103527;
+  text-decoration: none;
 }
 
 .animate-on-scroll {

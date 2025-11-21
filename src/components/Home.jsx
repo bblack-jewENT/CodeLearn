@@ -97,7 +97,7 @@ const Home = () => {
         className="animate-on-scroll"
         style={{ background: "#fff", padding: "3rem 0", margin: "8rem 0" }}
       >
-        <div className="container">
+        <div className="courses-container">
           <h2
             style={{
               fontSize: "2rem",

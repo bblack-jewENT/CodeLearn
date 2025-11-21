@@ -39,7 +39,7 @@ const LessonCard = ({ lesson, courseId }) => {
         <Link
           to={`/quiz/${courseId}/${lesson.id}`}
           className="btn"
-          style={{ background: "#22c55e", fontSize: "0.95rem" }}
+          style={{ background: "#2a8a4dff", fontSize: "0.95rem" }}
         >
           Take Quiz
         </Link>
