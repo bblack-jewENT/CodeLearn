@@ -64,7 +64,7 @@ const Home = () => {
         className="animate-on-scroll"
         style={{ padding: "3rem 0" }}
       >
-        <div className="container">
+        <div className="container" style={{ marginBottom: "8rem" }}>
           <h2
             style={{
               fontSize: "2rem",
@@ -85,8 +85,8 @@ const Home = () => {
           >
             CourseCode is your gateway to mastering web development. We offer
             beginner-friendly courses in HTML, CSS, JavaScript, and React,
-            complete with interactive lessons, short youtube videos and quizzes to track your
-            progress.
+            complete with interactive lessons, short youtube videos and quizzes
+            to track your progress.
           </p>
         </div>
       </section>
