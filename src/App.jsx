@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { AuthProvider } from "./contexts/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -43,28 +45,51 @@ function App() {
   console.log("App mounted: rendering App component");
   return (
     <PayPalScriptProvider options={paypalOptions}>
-      <Router>
-        <ErrorBoundary>
-          <div className="min-h-screen flex flex-col">
-            {/* Fallback removed */}
-            <Navbar />
-            <main className="flex-grow">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/courses" element={<Courses />} />
-                <Route path="/quiz/:courseId/:lessonId" element={<Quiz />} />
-                <Route
-                  path="/assignments/:courseId/:lessonId"
-                  element={<Assignments />}
-                />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/pricing" element={<Pricing />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-        </ErrorBoundary>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <ErrorBoundary>
+            <div className="min-h-screen flex flex-col">
+              {/* Fallback removed */}
+              <Navbar />
+              <main className="flex-grow">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/courses" element={<Courses />} />
+                  <Route
+                    path="/quiz/:courseId/:lessonId"
+                    element={
+                      <ProtectedRoute>
+                        <Quiz />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/assignments/:courseId/:lessonId"
+                    element={<Assignments />}
+                  />
+                  <Route
+                    path="/dashboard"
+                    element={
+                      <ProtectedRoute>
+                        <Dashboard />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/pricing"
+                    element={
+                      <ProtectedRoute>
+                        <Pricing />
+                      </ProtectedRoute>
+                    }
+                  />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
+          </ErrorBoundary>
+        </Router>
+      </AuthProvider>
     </PayPalScriptProvider>
   );
 }
