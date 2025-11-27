@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import { useAuth } from "../contexts/AuthContext";
 
 const Home = () => {
   const aboutRef = useRef();
   const coursesRef = useRef();
+  const { openAuthModal } = useAuth();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,9 +54,9 @@ const Home = () => {
             Learn web development basics through interactive tutorials, quizzes,
             and hands-on projects.
           </p>
-          <Link to="/courses" className="btn">
-            Start Learning Now
-          </Link>
+          <button onClick={openAuthModal} className="btn">
+            Sign Up Now
+          </button>
         </div>
       </section>
 

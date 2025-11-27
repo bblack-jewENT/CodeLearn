@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 
-const Auth = ({ onClose }) => {
+const Auth = () => {
   const [isSignUp, setIsSignUp] = useState(true);
   const [formData, setFormData] = useState({
     username: "",
@@ -10,7 +10,7 @@ const Auth = ({ onClose }) => {
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const { signup, login } = useAuth();
+  const { signup, login, closeAuthModal } = useAuth();
 
   const handleChange = (e) => {
     setFormData({
@@ -30,7 +30,7 @@ const Auth = ({ onClose }) => {
       } else {
         await login(formData.email, formData.password);
       }
-      onClose(); // Close the modal on success
+      closeAuthModal(); // Close the modal on success
     } catch (err) {
       setError(err.message);
     }
@@ -38,68 +38,99 @@ const Auth = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-4">
-          {isSignUp ? "Sign Up" : "Log In"}
-        </h2>
-        {error && <p className="text-red-500 mb-4">{error}</p>}
-        <form onSubmit={handleSubmit}>
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
+      <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md border border-gray-200">
+        <div className="text-center mb-6">
+          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+            {isSignUp ? "Create Account" : "Welcome Back"}
+          </h2>
+          <p className="text-gray-600">
+            {isSignUp
+              ? "Join CourseCode to start learning"
+              : "Sign in to your account"}
+          </p>
+        </div>
+        {error && (
+          <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4">
+            {error}
+          </div>
+        )}
+        <form onSubmit={handleSubmit} className="space-y-4">
           {isSignUp && (
-            <div className="mb-4">
-              <label className="block text-gray-700">Username</label>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Username
+              </label>
               <input
                 type="text"
                 name="username"
                 value={formData.username}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border rounded"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                placeholder="Enter your username"
                 required
               />
             </div>
           )}
-          <div className="mb-4">
-            <label className="block text-gray-700">Email</label>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Email Address
+            </label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+              placeholder="Enter your email"
               required
             />
           </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Password</label>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Password
+            </label>
             <input
               type="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+              placeholder="Enter your password"
               required
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 disabled:opacity-50"
+            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
           >
-            {loading ? "Loading..." : isSignUp ? "Sign Up" : "Log In"}
+            {loading ? (
+              <div className="flex items-center justify-center">
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                {isSignUp ? "Creating Account..." : "Signing In..."}
+              </div>
+            ) : isSignUp ? (
+              "Create Account"
+            ) : (
+              "Sign In"
+            )}
           </button>
         </form>
-        <p className="mt-4 text-center">
-          {isSignUp ? "Already have an account?" : "Don't have an account?"}
-          <button
-            onClick={() => setIsSignUp(!isSignUp)}
-            className="text-blue-500 ml-1"
-          >
-            {isSignUp ? "Log In" : "Sign Up"}
-          </button>
-        </p>
+        <div className="mt-6 text-center">
+          <p className="text-gray-600">
+            {isSignUp ? "Already have an account?" : "Don't have an account?"}
+            <button
+              onClick={() => setIsSignUp(!isSignUp)}
+              className="text-blue-600 hover:text-blue-800 font-medium ml-1 transition-colors"
+            >
+              {isSignUp ? "Sign In" : "Sign Up"}
+            </button>
+          </p>
+        </div>
         <button
-          onClick={onClose}
-          className="absolute top-2 right-2 text-gray-500"
+          onClick={closeAuthModal}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-light transition-colors"
         >
           ×
         </button>

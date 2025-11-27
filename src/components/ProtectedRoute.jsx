@@ -3,10 +3,16 @@ import { useAuth } from "../contexts/AuthContext";
 import Auth from "./Auth";
 
 const ProtectedRoute = ({ children }) => {
-  const { currentUser } = useAuth();
+  const { currentUser, showAuthModal, openAuthModal } = useAuth();
+
+  React.useEffect(() => {
+    if (!currentUser) {
+      openAuthModal();
+    }
+  }, [currentUser, openAuthModal]);
 
   if (!currentUser) {
-    return <Auth onClose={() => {}} />; // onClose does nothing, user must log in
+    return showAuthModal ? <Auth /> : null;
   }
 
   return children;

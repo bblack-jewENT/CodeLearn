@@ -16,6 +16,7 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   function signup(email, password, username) {
     return createUserWithEmailAndPassword(auth, email, password).then(
@@ -44,11 +45,17 @@ export function AuthProvider({ children }) {
     return unsubscribe;
   }, []);
 
+  const openAuthModal = () => setShowAuthModal(true);
+  const closeAuthModal = () => setShowAuthModal(false);
+
   const value = {
     currentUser,
     signup,
     login,
     logout,
+    showAuthModal,
+    openAuthModal,
+    closeAuthModal,
   };
 
   return (

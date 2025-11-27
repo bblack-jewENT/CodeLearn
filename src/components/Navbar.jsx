@@ -6,8 +6,8 @@ import Auth from "./Auth";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [showAuth, setShowAuth] = useState(false);
-  const { currentUser, logout } = useAuth();
+  const { currentUser, logout, showAuthModal, openAuthModal, closeAuthModal } =
+    useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,8 +37,15 @@ const Navbar = () => {
         <Link to="/" className="logo" style={{ marginLeft: "0.5rem" }}>
           CourseCode
         </Link>
-        <div className="container">
-          <div style={{ marginRight: "35px" }}>
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <div style={{ marginRight: "35px", display: "flex", gap: "1rem" }}>
             <Link className="navbar-link" to="/">
               Home
             </Link>
@@ -52,36 +59,18 @@ const Navbar = () => {
               Dashboard
             </Link>
           </div>
-          <div>
-            {currentUser ? (
-              <>
-                <span className="navbar-link">
-                  Welcome, {currentUser.displayName || currentUser.email}
-                </span>
-                <button onClick={handleLogout} className="navbar-link ml-4">
-                  Logout
-                </button>
-              </>
-            ) : (
-              <>
-                <button
-                  onClick={() => setShowAuth(true)}
-                  className="navbar-link"
-                >
-                  Sign Up
-                </button>
-                <button
-                  onClick={() => setShowAuth(true)}
-                  className="navbar-link ml-4"
-                >
-                  Log In
-                </button>
-              </>
-            )}
-          </div>
+          {currentUser && (
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <span className="navbar-link">
+                Welcome, {currentUser.displayName || currentUser.email}
+              </span>
+              <button onClick={handleLogout} className="navbar-link ml-4">
+                Logout
+              </button>
+            </div>
+          )}
         </div>
       </nav>
-      {showAuth && <Auth onClose={() => setShowAuth(false)} />}
     </>
   );
 };
