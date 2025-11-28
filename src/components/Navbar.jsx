@@ -62,10 +62,10 @@ const Navbar = () => {
           {currentUser && (
             <div style={{ display: "flex", alignItems: "center" }}>
               <span className="navbar-link">
-                Welcome, {currentUser.displayName || currentUser.email}
+                Welcome, {currentUser.displayName}
               </span>
-              <button onClick={handleLogout} className="navbar-link ml-4">
-                Logout
+              <button onClick={handleLogout} className="btn" style={{marginLeft: "1rem",}}>
+                Log Out
               </button>
             </div>
           )}
