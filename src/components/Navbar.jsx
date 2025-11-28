@@ -60,11 +60,15 @@ const Navbar = () => {
             </Link>
           </div>
           {currentUser && (
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <span className="navbar-link">
-                Welcome, {currentUser.displayName}
-              </span>
-              <button onClick={handleLogout} className="btn" style={{marginLeft: "1rem",}}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+              <Link to="/settings">
+                <div className="avatar">
+                  {currentUser.displayName
+                    ? currentUser.displayName.charAt(0).toUpperCase()
+                    : currentUser.email.charAt(0).toUpperCase()}
+                </div>
+              </Link>
+              <button onClick={handleLogout} className="btn">
                 Log Out
               </button>
             </div>

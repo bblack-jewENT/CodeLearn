@@ -12,6 +12,7 @@ import Quiz from "./components/Quiz";
 import Assignments from "./components/Assignments";
 import Dashboard from "./components/Dashboard";
 import Pricing from "./components/Pricing";
+import Settings from "./components/Settings";
 
 function ErrorBoundary({ children }) {
   const [error, setError] = useState(null);
@@ -80,6 +81,14 @@ function App() {
                     element={
                       <ProtectedRoute>
                         <Pricing />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/settings"
+                    element={
+                      <ProtectedRoute>
+                        <Settings />
                       </ProtectedRoute>
                     }
                   />

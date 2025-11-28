@@ -4,6 +4,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../services/firebase";
 
@@ -53,6 +54,7 @@ export function AuthProvider({ children }) {
     signup,
     login,
     logout,
+    updateProfile,
     showAuthModal,
     openAuthModal,
     closeAuthModal,
