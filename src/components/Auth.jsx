@@ -55,22 +55,24 @@ const Auth = () => {
     >
       <div
         style={{
-          backgroundColor: "white",
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(10px)",
           padding: "1rem",
           borderRadius: "1rem",
           boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25)",
           width: "100%",
           maxWidth: "28rem",
-          border: "1px solid #e5e7eb",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
           position: "relative",
         }}
+        className="login-form-container"
       >
         <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
           <h2
             style={{
               fontSize: "1.875rem",
               fontWeight: "bold",
-              color: "#1f2937",
+              color: "#223a5cff",
               marginBottom: "0.5rem",
             }}
           >
@@ -257,7 +259,7 @@ const Auth = () => {
           </button>
         </form>
         <div style={{ marginTop: "1.5rem", textAlign: "center" }}>
-          <p style={{ color: "#6b7280" }}>
+          <p style={{ color: "#b4b7bdff" }}>
             {isSignUp ? "Already have an account?" : "Don't have an account?"}
             <button
               onClick={() => setIsSignUp(!isSignUp)}
