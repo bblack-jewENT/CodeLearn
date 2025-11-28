@@ -62,7 +62,10 @@ const Navbar = () => {
           {currentUser && (
             <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
               <Link to="/settings">
-                <div className="avatar">
+                <div
+                  className="avatar"
+                  style={{ textDecoration: "none !important" }}
+                >
                   {currentUser.displayName
                     ? currentUser.displayName.charAt(0).toUpperCase()
                     : currentUser.email.charAt(0).toUpperCase()}

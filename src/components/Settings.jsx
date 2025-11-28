@@ -5,7 +5,6 @@ const Settings = () => {
   const { currentUser, updateProfile } = useAuth();
   const [username, setUsername] = useState(currentUser?.displayName || "");
   const [email, setEmail] = useState(currentUser?.email || "");
-  const [profilePicture, setProfilePicture] = useState(null);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -43,30 +42,6 @@ const Settings = () => {
         onSubmit={handleSubmit}
         style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
       >
-        <div>
-          <label
-            style={{
-              display: "block",
-              fontWeight: "500",
-              marginBottom: "0.5rem",
-            }}
-          >
-            Profile Picture
-          </label>
-          <input type="file" accept="image/*" onChange={handleFileChange} />
-          {profilePicture && (
-            <img
-              src={URL.createObjectURL(profilePicture)}
-              alt="Preview"
-              style={{
-                width: "100px",
-                height: "100px",
-                borderRadius: "50%",
-                marginTop: "0.5rem",
-              }}
-            />
-          )}
-        </div>
         <div>
           <label
             style={{
