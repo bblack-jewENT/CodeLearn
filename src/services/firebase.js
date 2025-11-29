@@ -7,15 +7,14 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// Replace with your actual Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyChRFYG9mgpzZSMe79C_jjzaeomvrysHyk",
-  authDomain: "coursecode-fbc07.firebaseapp.com",
-  projectId: "coursecode-fbc07",
-  storageBucket: "coursecode-fbc07.appspot.com",
-  messagingSenderId: "681599963604",
-  appId: "1:681599963604:web:8b52d07cf07582ce188641",
-  measurementId: "G-949QEFQM5D",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
