@@ -1,6 +1,42 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 const LessonCard = ({ lesson, courseId }) => {
+  // Function to get MDN documentation URL based on lesson title
+  const getMdnUrl = (title) => {
+    const urlMap = {
+      "Introduction to HTML":
+        "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      "HTML Elements":
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Element",
+      "HTML Attributes":
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes",
+      "Introduction to CSS": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      "CSS Selectors":
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors",
+      "CSS Properties":
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference",
+      "Introduction to JavaScript":
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "Variables and Data Types":
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures",
+      Functions:
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+      "Introduction to React":
+        "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started",
+      Components:
+        "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components",
+      "State and Props":
+        "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_state_management",
+      "Advanced CSS": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      "ES6+ JavaScript":
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
+      "React Hooks":
+        "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state",
+    };
+
+    return urlMap[title] || "https://developer.mozilla.org/en-US/docs/Web";
+  };
   return (
     <div
       style={{
@@ -26,8 +62,10 @@ const LessonCard = ({ lesson, courseId }) => {
           alignItems: "center",
         }}
       >
-        <Link
-          to={`/lesson/${courseId}/${lesson.id}`}
+        <a
+          href={getMdnUrl(lesson.title)}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             color: "#2563eb",
             textDecoration: "underline",
@@ -35,7 +73,7 @@ const LessonCard = ({ lesson, courseId }) => {
           }}
         >
           Read Lesson
-        </Link>
+        </a>
         <Link
           to={`/quiz/${courseId}/${lesson.id}`}
           className="btn"
