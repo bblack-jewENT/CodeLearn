@@ -353,6 +353,625 @@ const Quiz = () => {
         "This lesson introduces React concepts including components, JSX, props, state, and hooks. Discover how Facebook's solution to complex UIs became the most popular frontend library in the world!",
       videoId: "Ke90Tje7VS0",
     },
+    5: {
+      title: "Advanced CSS & Modern Layout",
+      image: "/img/college-students.jpg",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>🎨 The Table Layout Era (1996-2006)</h3>
+            <p>
+              Back in the day, web designers used HTML tables for everything -
+              navigation, layout, even entire websites! Want a two-column
+              layout? Use a table with two cells! It was messy, slow, and
+              frustrating.
+            </p>
+            <div className="code-nightmare">
+              <pre>
+                <code>
+                  &lt;table&gt;
+                  &lt;tr&gt;&lt;td&gt;Navigation&lt;/td&gt;&lt;td&gt;Content&lt;/td&gt;&lt;/tr&gt;
+                  &lt;/table&gt;
+                </code>
+              </pre>
+              <p className="caption">
+                😱 Tables were used for LAYOUTS, not data!
+              </p>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🧹 The Great Clean-Up (2006-2010)</h3>
+            <p>
+              Web standards advocates fought hard to separate content from
+              design. "No more tables for layout!" they shouted. CSS positioning
+              and floats became the heroes, but float-based layouts were like
+              building with Jenga blocks - everything fell apart if you weren't
+              careful!
+            </p>
+            <div className="float-demo">
+              <div className="float-box left">Float Left</div>
+              <div className="float-box right">Float Right</div>
+              <p>Content flows around floated elements...</p>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>⚡ Flexbox Revolution (2012-2017)</h3>
+            <p>
+              In 2009, the Flexbox spec was introduced, but it took years for
+              browsers to support it. Finally, web designers had a proper tool
+              for one-dimensional layouts! No more clearing floats or
+              calculating percentages for centering elements!
+            </p>
+            <div className="flexbox-demo">
+              <div className="flex-container">
+                <div className="flex-item">1</div>
+                <div className="flex-item">2</div>
+                <div className="flex-item">3</div>
+              </div>
+              <p className="caption">
+                ✨ Perfect centering with just 3 lines of CSS!
+              </p>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🎯 Grid System Mastery (2017-Present)</h3>
+            <p>
+              CSS Grid arrived in 2017, giving us two-dimensional layouts!
+              Suddenly, we could create magazine-quality layouts with ease. The
+              future of web design had arrived, and it was beautiful!
+            </p>
+            <div className="grid-demo">
+              <div className="grid-container">
+                <div className="grid-item header">Header</div>
+                <div className="grid-item sidebar">Sidebar</div>
+                <div className="grid-item main">Main Content</div>
+                <div className="grid-item aside">Aside</div>
+                <div className="grid-item footer">Footer</div>
+              </div>
+              <p className="caption">
+                🎨 Magazine layouts are now possible with CSS alone!
+              </p>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Master advanced CSS techniques including Flexbox, CSS Grid, custom properties, animations, and modern layout patterns. Transform from a CSS beginner to a layout master!",
+      videoId: "yfoY53QXEnI",
+    },
+    6: {
+      title: "ES6+ & Modern JavaScript",
+      image: "/img/church-students1.jpeg",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>🐌 The JavaScript Dark Ages (1995-2015)</h3>
+            <p>
+              For 20 years, JavaScript remained largely unchanged. Developers
+              wrote <code>var</code>, created functions with{" "}
+              <code>function</code> keywords, and managed callbacks like a stack
+              of paper plates - one wrong move and everything would tumble down!
+            </p>
+            <div className="callback-hell">
+              <pre>
+                <code>
+                  getUser(id, function(user) {"{"}
+                  getOrders(user.id, function(orders) {"{"}
+                  getOrderDetails(orders[0].id, function(details) {"{"}
+                  // Welcome to Callback Hell! 😈
+                  {"}"}){"}"}){"}"})
+                </code>
+              </pre>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🚀 The ES6 Explosion (2015)</h3>
+            <p>
+              ECMAScript 2015 (ES6) changed everything! In one massive update,
+              JavaScript got modern syntax: <code>let</code> and{" "}
+              <code>const</code>, arrow functions, classes, template literals,
+              and modules. It was like JavaScript got a complete makeover!
+            </p>
+            <div className="es6-comparison">
+              <div className="old-way">
+                <h4>Old JavaScript (ES5)</h4>
+                <code>var name = "John";</code>
+                <br />
+                <code>
+                  function greet(name) {"{"} return "Hello " + name; {"}"}
+                </code>
+              </div>
+              <div className="new-way">
+                <h4>Modern JavaScript (ES6+)</h4>
+                <code>const name = "John";</code>
+                <br />
+                <code>const greet = (name) =&gt; `Hello ${name}`;</code>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>⏰ Asynchronous Revolution (2017-2018)</h3>
+            <p>
+              First came Promises to escape callback hell, then{" "}
+              <code>async/await</code> in 2017 made asynchronous code look
+              synchronous! No more nested callbacks - just clean, readable code
+              that flows like a river.
+            </p>
+            <div className="async-demo">
+              <div className="async-comparison">
+                <div className="promise-way">
+                  <h4>🔥 With Promises</h4>
+                  <code>getUser().then(user =&gt; getOrders(user.id))</code>
+                </div>
+                <div className="async-await-way">
+                  <h4>✨ With async/await</h4>
+                  <code>const user = await getUser();</code>
+                  <br />
+                  <code>const orders = await getOrders(user.id);</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🎯 Modern JavaScript Today (2018-Present)</h3>
+            <p>
+              JavaScript now gets yearly updates with features like optional
+              chaining (<code>?.</code>), nullish coalescing (<code>??</code>),
+              top-level await, and more. JavaScript has evolved from a "toy
+              language" to a powerhouse that runs everywhere!
+            </p>
+            <div className="modern-features">
+              <div className="feature">
+                Optional Chaining: <code>user?.profile?.name</code>
+              </div>
+              <div className="feature">
+                Nullish Coalescing: <code>value ?? "default"</code>
+              </div>
+              <div className="feature">
+                BigInt: <code>123n</code>
+              </div>
+              <div className="feature">
+                Private Fields: <code>#privateMethod()</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Dive deep into modern JavaScript (ES6+) features including destructuring, modules, async/await, classes, and cutting-edge features. Write cleaner, more efficient JavaScript code!",
+      videoId: "W6NZfCO5SIk",
+    },
+    7: {
+      title: "Advanced React & Performance",
+      image: "/img/college-students1.jpg",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>🏗️ Beyond Basic Components (2013-2015)</h3>
+            <p>
+              React's component system was revolutionary, but early developers
+              quickly hit limits. How do components communicate? How do you
+              share data across many components? The solution? Context API and
+              higher-order components!
+            </p>
+            <div className="react-evolution">
+              <div className="stage">
+                <strong>Class Components</strong>
+                <code>class MyComponent extends React.Component</code>
+              </div>
+              <div className="arrow">➡️</div>
+              <div className="stage">
+                <strong>Functional + Hooks</strong>
+                <code>const MyComponent = () =&gt; useState()</code>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>⚓ The Hooks Revolution (2018)</h3>
+            <p>
+              In 2018, React introduced Hooks - functions that let you use state
+              and other React features without classes. <code>useState</code>,{" "}
+              <code>useEffect</code>, <code>useContext</code> - suddenly,
+              functional components became super powerful!
+            </p>
+            <div className="hooks-demo">
+              <div className="hook-example">
+                <code>const [count, setCount] = useState(0);</code>
+                <code>
+                  useEffect(() =&gt; document.title = count, [count]);
+                </code>
+                <code>const theme = useContext(ThemeContext);</code>
+              </div>
+              <p className="caption">
+                🚀 Hooks made React functional components incredibly powerful!
+              </p>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>⚡ Performance Optimization Challenge</h3>
+            <p>
+              As React apps grew bigger, performance became crucial. Developers
+              discovered memoization with <code>React.memo</code>,{" "}
+              <code>useMemo</code>, and <code>useCallback</code>. Plus, React's
+              reconciliation algorithm became smarter with concurrent rendering!
+            </p>
+            <div className="performance-demo">
+              <div className="optimization-types">
+                <div className="opt-type">
+                  <strong>Code Splitting</strong>
+                  <code>lazy(() =&gt; import('./Heavy'))</code>
+                </div>
+                <div className="opt-type">
+                  <strong>Memoization</strong>
+                  <code>memo(ExpensiveComponent)</code>
+                </div>
+                <div className="opt-type">
+                  <strong>Virtual Scrolling</strong>
+                  <code>react-window</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🌟 The React Ecosystem (2018-Present)</h3>
+            <p>
+              Today, React powers everything from simple websites to complex
+              applications like Facebook, Instagram, and Netflix. With React
+              Native, the same knowledge extends to mobile apps. React truly
+              conquered the frontend world!
+            </p>
+            <div className="ecosystem-showcase">
+              <div className="tech-stack">
+                <div className="stack-item">React</div>
+                <div className="stack-item">Next.js</div>
+                <div className="stack-item">React Native</div>
+                <div className="stack-item">Remix</div>
+                <div className="stack-item">Gatsby</div>
+              </div>
+              <p className="caption">
+                🌍 React ecosystem spans web, mobile, and beyond!
+              </p>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Master advanced React concepts including Hooks, Context, performance optimization, code splitting, and React ecosystem tools. Build scalable, high-performance React applications!",
+      videoId: "Ke90Tje7VS0",
+    },
+    8: {
+      title: "Backend Development & APIs",
+      image: "/img/favicon-logo.png",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>🖥️ The Server-Side Renaissance (1995-2005)</h3>
+            <p>
+              In the early web, servers ruled everything! Every webpage was
+              generated by servers using Perl, PHP, ASP, or CGI scripts. The
+              browser was just a "dumb" display device that showed what the
+              server sent. Simple times!
+            </p>
+            <div className="server-architecture">
+              <div className="server-box">Server</div>
+              <div className="arrow">➡️</div>
+              <div className="html-box">HTML Page</div>
+              <div className="arrow">➡️</div>
+              <div className="browser-box">Browser</div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🔌 The AJAX Revolution (2005-2010)</h3>
+            <p>
+              Google's Gmail proved it was possible - dynamic web apps without
+              page refreshes! XMLHttpRequest changed everything. Suddenly,
+              browsers could fetch data in the background and update the page.
+              The age of Web 2.0 had begun!
+            </p>
+            <div className="ajax-demo">
+              <div className="ajax-comparison">
+                <div className="old-web">
+                  <strong>Old Way: Full Page Load</strong>
+                  <p>👆 Click → Wait → New Page</p>
+                </div>
+                <div className="new-web">
+                  <strong>AJAX Way: Dynamic Updates</strong>
+                  <p>👆 Click → Background fetch → Instant update</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🎯 The API Economy (2010-2015)</h3>
+            <p>
+              Companies realized they could expose their data through APIs
+              (Application Programming Interfaces). Twitter API, Facebook Graph
+              API, Google Maps API - suddenly, anyone could build apps using
+              existing services!
+            </p>
+            <div className="api-showcase">
+              <div className="api-provider">
+                <strong>Twitter API</strong>
+                <code>
+                  GET /users/{"{"}user_id{"}"}/tweets
+                </code>
+              </div>
+              <div className="api-provider">
+                <strong>Google Maps API</strong>
+                <code>GET /maps/api/geocode/json</code>
+              </div>
+              <div className="api-provider">
+                <strong>Stripe API</strong>
+                <code>POST /v1/charges</code>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>☁️ Cloud & Microservices Era (2015-Present)</h3>
+            <p>
+              Modern backend development shifted to cloud services and
+              microservices. AWS, Docker, Kubernetes, serverless functions -
+              developers now build scalable, distributed systems that can handle
+              millions of users globally!
+            </p>
+            <div className="modern-backend">
+              <div className="backend-stack">
+                <div className="service">Authentication</div>
+                <div className="service">Database</div>
+                <div className="service">API Gateway</div>
+                <div className="service">File Storage</div>
+                <div className="service">Analytics</div>
+              </div>
+              <p className="caption">
+                ☁️ Modern backends are built from cloud services!
+              </p>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Explore backend development with Node.js, databases, REST APIs, authentication, and cloud services. Learn to build robust, scalable server-side applications!",
+      videoId: "UB1O30fR-EE",
+    },
+    9: {
+      title: "Database Design & Management",
+      image: "/img/college-students.jpg",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>📊 The Punch Card Era (1960s-1980s)</h3>
+            <p>
+              Before databases, companies used punch cards and file systems to
+              store data. Each application had its own files, and sharing data
+              between programs was nearly impossible. It was the digital stone
+              age!
+            </p>
+            <div className="database-evolution">
+              <div className="era">
+                <strong>Punch Cards</strong>
+                <p>🔳 Physical holes store data</p>
+              </div>
+              <div className="era">
+                <strong>File Systems</strong>
+                <p>📁 Data in separate files</p>
+              </div>
+              <div className="era">
+                <strong>Databases</strong>
+                <p>🗄️ Centralized data management</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🏗️ The Relational Revolution (1970s-1990s)</h3>
+            <p>
+              Edgar Codd's relational database theory changed everything!
+              Instead of storing data in files, why not store it in tables with
+              relationships? SQL became the universal language for querying
+              structured data. This was computer science gold!
+            </p>
+            <div className="sql-demo">
+              <div className="sql-example">
+                <pre>
+                  <code>
+                    SELECT users.name, orders.total FROM users JOIN orders ON
+                    users.id = orders.user_id WHERE orders.total &gt; 100;
+                  </code>
+                </pre>
+                <p className="caption">
+                  💎 SQL: The language that ruled databases for 50+ years
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>📈 The Big Data Challenge (2000s-2010s)</h3>
+            <p>
+              As the internet exploded, traditional databases couldn't handle
+              the massive scale! Google and others pioneered NoSQL databases -
+              not just tables, but key-value stores, document databases, and
+              graph databases. Big data required big solutions!
+            </p>
+            <div className="database-types">
+              <div className="db-type">
+                <strong>Relational</strong>
+                <p>📋 Structured tables</p>
+                <small>MySQL, PostgreSQL, SQL Server</small>
+              </div>
+              <div className="db-type">
+                <strong>Document</strong>
+                <p>📄 JSON-like documents</p>
+                <small>MongoDB, CouchDB</small>
+              </div>
+              <div className="db-type">
+                <strong>Key-Value</strong>
+                <p>🔑 Simple key-value pairs</p>
+                <small>Redis, DynamoDB</small>
+              </div>
+              <div className="db-type">
+                <strong>Graph</strong>
+                <p>🕸️ Nodes and relationships</p>
+                <small>Neo4j, Amazon Neptune</small>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>⚡ Modern Database Innovation (2015-Present)</h3>
+            <p>
+              Today's databases combine the best of both worlds - SQL query
+              power with NoSQL flexibility! Cloud databases automatically scale,
+              multi-region replication ensures global availability, and
+              real-time analytics run on streaming data!
+            </p>
+            <div className="modern-database">
+              <div className="cloud-features">
+                <div className="feature">Auto-scaling</div>
+                <div className="feature">Multi-region</div>
+                <div className="feature">Real-time</div>
+                <div className="feature">Serverless</div>
+                <div className="feature">AI-powered</div>
+              </div>
+              <p className="caption">
+                🚀 Modern databases are intelligent and self-managing!
+              </p>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Master database fundamentals including relational design, SQL, NoSQL databases, normalization, and modern database technologies. Build efficient, scalable data architectures!",
+      videoId: "yfoY53QXEnI",
+    },
+    10: {
+      title: "Web Security & Best Practices",
+      image: "/img/church-students1.jpeg",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>🔓 The Wild West Web (1990s)</h3>
+            <p>
+              Early web developers had bigger fish to fry than security - just
+              making websites work was hard enough! The internet was a friendly
+              place where websites trusted users and users trusted websites.
+              This innocence wouldn't last forever...
+            </p>
+            <div className="security-evolution">
+              <div className="era Innocence">
+                <strong>1990s</strong>
+                <p>🤝 "We all trust each other!"</p>
+              </div>
+              <div className="era Warning">
+                <strong>2000s</strong>
+                <p>⚠️ "Wait, people are mean..."</p>
+              </div>
+              <div className="era Defense">
+                <strong>2010s+</strong>
+                <p>🛡️ "Security first!"</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>💉 The Injection Attacks Wake-Up Call</h3>
+            <p>
+              SQL injection attacks taught the world a harsh lesson: never trust
+              user input! Attackers could execute malicious SQL commands through
+              forms. The famous "Little Bobby Tables" comic summed it up
+              perfectly - input validation became crucial!
+            </p>
+            <div className="injection-demo">
+              <div className="vulnerable-code">
+                <strong>❌ Vulnerable:</strong>
+                <code>
+                  query = "SELECT * FROM users WHERE name = '" + userInput + "'"
+                </code>
+                <p>
+                  Attack: <code>'; DROP TABLE users; --</code>
+                </p>
+              </div>
+              <div className="safe-code">
+                <strong>✅ Safe:</strong>
+                <code>query = "SELECT * FROM users WHERE name = ?"</code>
+                <p>Use prepared statements!</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🔐 The Authentication Revolution</h3>
+            <p>
+              Passwords alone weren't enough anymore. Multi-factor
+              authentication, OAuth, JWT tokens - the web learned to verify
+              identity properly. Now we even have passwordless authentication
+              using biometrics and hardware keys!
+            </p>
+            <div className="auth-evolution">
+              <div className="auth-method">
+                <strong>Password</strong>
+                <p>🔑 Something you know</p>
+              </div>
+              <div className="auth-method">
+                <strong>2FA</strong>
+                <p>📱 Something you have</p>
+              </div>
+              <div className="auth-method">
+                <strong>Biometric</strong>
+                <p>👁️ Something you are</p>
+              </div>
+              <div className="auth-method">
+                <strong>Hardware Key</strong>
+                <p>🔐 Something physical</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🛡️ Modern Security Practices (2010s-Present)</h3>
+            <p>
+              Today's web security is sophisticated: HTTPS everywhere, Content
+              Security Policy, automated security scanning, penetration testing,
+              and secure-by-design principles. We learned that security isn't
+              optional - it's essential!
+            </p>
+            <div className="security-layers">
+              <div className="security-layer">
+                <strong>Network Layer</strong>
+                <p>HTTPS, Firewalls</p>
+              </div>
+              <div className="security-layer">
+                <strong>Application Layer</strong>
+                <p>Input validation, XSS protection</p>
+              </div>
+              <div className="security-layer">
+                <strong>Data Layer</strong>
+                <p>Encryption, Access control</p>
+              </div>
+              <div className="security-layer">
+                <strong>Infrastructure</strong>
+                <p>Monitoring, Incident response</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Master web security fundamentals including authentication, authorization, data protection, common vulnerabilities, and modern security practices. Build secure applications that protect user data!",
+      videoId: "W6NZfCO5SIk",
+    },
   };
 
   // Mock quiz data - in a real app, this would come from an API
@@ -533,6 +1152,308 @@ const Quiz = () => {
           "State is for styling, props for data",
         ],
         correct: 0,
+      },
+    ],
+    5: [
+      // Advanced CSS & Modern Layout
+      {
+        question: "What does CSS Grid provide that Flexbox doesn't?",
+        options: [
+          "Two-dimensional layouts",
+          "Animations",
+          "Typography control",
+          "Color management",
+        ],
+        correct: 0,
+      },
+      {
+        question: "Which property is used to create gaps between grid items?",
+        options: ["grid-gap", "gap", "grid-spacing", "item-gap"],
+        correct: 1,
+      },
+      {
+        question: "What is the purpose of CSS custom properties (variables)?",
+        options: [
+          "To store JavaScript values",
+          "To create reusable values in CSS",
+          "To define HTML attributes",
+          "To manage JavaScript state",
+        ],
+        correct: 1,
+      },
+      {
+        question:
+          "Which CSS feature allows for responsive design without media queries?",
+        options: ["Flexbox", "CSS Grid", "Container queries", "CSS variables"],
+        correct: 2,
+      },
+      {
+        question:
+          "What is the difference between absolute and relative units in CSS?",
+        options: [
+          "Relative units are fixed, absolute units scale",
+          "Absolute units are fixed, relative units scale",
+          "There is no difference",
+          "Relative units only work with typography",
+        ],
+        correct: 1,
+      },
+    ],
+    6: [
+      // ES6+ & Modern JavaScript
+      {
+        question: "What is the difference between `let` and `var`?",
+        options: [
+          "No difference",
+          "`let` is block-scoped, `var` is function-scoped",
+          "`var` is block-scoped, `let` is function-scoped",
+          "`let` is for constants, `var` is for variables",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What does the optional chaining operator (?.) do?",
+        options: [
+          "Makes code optional",
+          "Safely accesses nested object properties",
+          "Creates optional parameters",
+          "Makes variables optional",
+        ],
+        correct: 1,
+      },
+      {
+        question: "How do you create a Promise in JavaScript?",
+        options: [
+          "new Promise()",
+          "createPromise()",
+          "Promise.create()",
+          "makePromise()",
+        ],
+        correct: 0,
+      },
+      {
+        question: "What is the purpose of async/await?",
+        options: [
+          "To make code slower",
+          "To write asynchronous code that looks synchronous",
+          "To replace Promises",
+          "To handle errors only",
+        ],
+        correct: 1,
+      },
+      {
+        question: "Which method is used to destructure an array?",
+        options: [
+          "Object destructuring",
+          "Array destructuring",
+          "Spread operator",
+          "Rest parameter",
+        ],
+        correct: 1,
+      },
+    ],
+    7: [
+      // Advanced React & Performance
+      {
+        question: "What is the purpose of React.memo()?",
+        options: [
+          "To make components faster",
+          "To prevent unnecessary re-renders",
+          "To manage component state",
+          "To handle events",
+        ],
+        correct: 1,
+      },
+      {
+        question: "When should you use useMemo()?",
+        options: [
+          "For expensive calculations",
+          "For handling side effects",
+          "For managing component state",
+          "For event handling",
+        ],
+        correct: 0,
+      },
+      {
+        question:
+          "What is the difference between useEffect and useLayoutEffect?",
+        options: [
+          "No difference",
+          "useLayoutEffect runs synchronously after DOM mutations",
+          "useEffect is faster",
+          "useLayoutEffect is deprecated",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is code splitting in React?",
+        options: [
+          "Splitting CSS from JavaScript",
+          "Loading components only when needed",
+          "Splitting large functions",
+          "Separating business logic from UI",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What does the useCallback hook do?",
+        options: [
+          "Caches function instances",
+          "Manages component lifecycle",
+          "Handles side effects",
+          "Manages component state",
+        ],
+        correct: 0,
+      },
+    ],
+    8: [
+      // Backend Development & APIs
+      {
+        question: "What does REST stand for in RESTful APIs?",
+        options: [
+          "Representational State Transfer",
+          "Remote Event System Technology",
+          "Reliable Element Service Transfer",
+          "Resource Exchange System Type",
+        ],
+        correct: 0,
+      },
+      {
+        question: "Which HTTP method is typically used for retrieving data?",
+        options: ["POST", "GET", "PUT", "DELETE"],
+        correct: 1,
+      },
+      {
+        question: "What is the main purpose of middleware in Express.js?",
+        options: [
+          "To handle database connections",
+          "To process requests before they reach route handlers",
+          "To serve static files",
+          "To manage user authentication",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is CORS and why is it important?",
+        options: [
+          "A database technology",
+          "Cross-Origin Resource Sharing for browser security",
+          "A JavaScript framework",
+          "A CSS property",
+        ],
+        correct: 1,
+      },
+      {
+        question:
+          "Which of these is NOT a typical backend programming language?",
+        options: ["Node.js", "Python", "JavaScript (browser)", "Java"],
+        correct: 2,
+      },
+    ],
+    9: [
+      // Database Design & Management
+      {
+        question: "What is normalization in database design?",
+        options: [
+          "Making databases smaller",
+          "Organizing data to reduce redundancy",
+          "Speeding up queries",
+          "Creating backup copies",
+        ],
+        correct: 1,
+      },
+      {
+        question: "Which database type is best for storing hierarchical data?",
+        options: [
+          "Relational databases",
+          "Document databases",
+          "Graph databases",
+          "Key-value stores",
+        ],
+        correct: 2,
+      },
+      {
+        question: "What does ACID stand for in database transactions?",
+        options: [
+          "Atomicity, Consistency, Isolation, Durability",
+          "Access, Control, Integration, Data",
+          "Analysis, Communication, Implementation, Deployment",
+          "Association, Connection, Independence, Distribution",
+        ],
+        correct: 0,
+      },
+      {
+        question: "What is the difference between SQL and NoSQL databases?",
+        options: [
+          "SQL are faster, NoSQL are slower",
+          "SQL use structured tables, NoSQL use flexible schemas",
+          "NoSQL are newer than SQL",
+          "SQL don't support relationships",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is indexing in databases?",
+        options: [
+          "Deleting old data",
+          "Creating data structures to speed up queries",
+          "Making backups",
+          "Encrypting data",
+        ],
+        correct: 1,
+      },
+    ],
+    10: [
+      // Web Security & Best Practices
+      {
+        question: "What is SQL injection?",
+        options: [
+          "Injecting malicious SQL code through user input",
+          "A type of database backup",
+          "A way to optimize database queries",
+          "A database programming language",
+        ],
+        correct: 0,
+      },
+      {
+        question: "What does HTTPS provide that HTTP doesn't?",
+        options: [
+          "Faster loading",
+          "Encryption and security",
+          "Better formatting",
+          "More features",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is XSS (Cross-Site Scripting)?",
+        options: [
+          "A database attack",
+          "Injecting malicious scripts into web pages",
+          "A network protocol",
+          "A type of encryption",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is the principle of least privilege?",
+        options: [
+          "Giving users maximum access",
+          "Giving users only the access they need",
+          "Never giving users any access",
+          "Giving all users the same access",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is two-factor authentication (2FA)?",
+        options: [
+          "Using two passwords",
+          "Using two different authentication methods",
+          "Logging in twice",
+          "Using two different browsers",
+        ],
+        correct: 1,
       },
     ],
   };
