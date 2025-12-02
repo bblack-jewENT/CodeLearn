@@ -15,8 +15,60 @@ const Quiz = () => {
   const lessonData = {
     1: {
       title: "HTML Basics",
-      history:
-        "HTML (HyperText Markup Language) was created by Tim Berners-Lee in 1991 as part of the World Wide Web project at CERN. It has evolved significantly over the years, from HTML 1.0 in 1993 to the modern HTML5 standard adopted in 2014. HTML provides the basic structure and semantic meaning to web pages, allowing browsers to display content in a meaningful way.",
+      history: () => (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+            <h2>Introduction to HTML</h2>
+            <h3>A bit of history…</h3>
+            <ul>
+              <li>The world wide web began as a way to share documents on the internet (which was starting to gain a foothold with other functionality like email & newsgroups).</li>
+              <li>It was introduced in 1990 by English physicist Tim Berners-Lee and Belgian computer scientist Robert Cailliau while both were working at CERN.</li>
+            </ul>
+            <h3>HyperText Markup Language</h3>
+            <ul>
+              <li>Initially, the documents that were shared on the WWW were text documents that were "marked-up" with extra tags to define the structural or visual aspects of the document.</li>
+              <li>Another effect of this language was to add extra functionality into the document, such as links to other online pages, creating a network of interconnected documents (this is the "hypertext" portion of the html name).</li>
+            </ul>
+            <h3>Fast-forward to now…</h3>
+            <ul>
+              <li>As computer technology and the WWW have evolved, html has continued to allow the content of web pages to evolve.</li>
+              <li>Aside from just links, we now enjoy multimedia content and applications that are seamlessly integrated into dynamic web pages, allowing the WWW to do much more than facilitate the sharing of documents.</li>
+            </ul>
+            <h3>Overview of HTML</h3>
+            <ul>
+              <li>Files have the .html or .htm extension.</li>
+              <li>Files can be composed in ordinary text editors.</li>
+              <li>Subsets of the text can be enclosed in "tags" to give that portion of text some structure or functionality: <tag>blahblahblah</tag></li>
+              <li>Tags have the general form: <tagname attribute1="value1" attribute2="value2"></li>
+            </ul>
+            <h3>An Example</h3>
+            <p>The following code:</p>
+            <pre><code><html>
+            <title>Example</title>
+            &lt;body&gt;
+            Hello World
+            &lt;/body&gt;
+            </code></pre>
+            <p>Would look like: Hello World</p>
+            <h3>Some Formatting Tags</h3>
+            <ul>
+              <li>&lt;p&gt;, &lt;/p&gt; - start and end of a paragraph</li>
+              <li>&lt;b&gt;, &lt;/b&gt; - start and end of bold text</li>
+              <li>&lt;i&gt;, &lt;/i&gt; - start and end of italicized text</li>
+              <li>&lt;u&gt;, &lt;/u&gt; - start and end of underlined text</li>
+              <li>&lt;br&gt; - insert a line break to override the default behavior of just wrapping the text around to the next line.</li>
+            </ul>
+            <h3>Some More Formatting Tags</h3>
+            <ul>
+              <li>&lt;h1&gt; , /h1&gt; - set enclosed text to be a "Level 1 heading" (also &lt;h2&gt;, &lt;h3&gt;, etc.)</li>
+              <li>&lt;font&gt; , &lt;/font&gt; - set font for enclosed text with style options set in tag. i.e. - &lt;font face = "Arial" color = "blue" size = "10"&gt;blahblahblah&lt;/font&gt;</li>
+              <li>Note: web browsers ignore all but the first space between pieces of text, and any line breaks in your .html file. It is the tags you include which determine how the page will look, not the way it looks in your text editor.</li>
+            </ul>
+          `,
+          }}
+        />
+      ),
       overview:
         "In this lesson, we'll explore the fundamentals of HTML including tags, elements, attributes, and document structure. The quiz will test your understanding of common HTML tags, their purposes, and how they work together to create web pages.",
       videoId: "UB1O30fR-EE",
@@ -307,15 +359,15 @@ const Quiz = () => {
           >
             History
           </h2>
-          <p
+          <div
             style={{
               fontSize: "1rem",
               lineHeight: "1.6",
               marginBottom: "2rem",
             }}
           >
-            {lesson.history}
-          </p>
+            {lesson.history()}
+          </div>
         </div>
         <div className="card" style={{ marginBottom: "2rem" }}>
           <h2
