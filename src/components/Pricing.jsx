@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PayPalButtons } from "@paypal/react-paypal-js";
 
 const Pricing = () => {
   const [subscription, setSubscription] = useState(
@@ -101,7 +102,7 @@ const Pricing = () => {
             Premium Plan
           </h2>
           <p style={{ fontSize: "2rem", fontWeight: "bold", color: "#207985" }}>
-            $0/month
+            $3.82/month
           </p>
           <ul style={{ textAlign: "left", margin: "1rem 0" }}>
             <li>All free features</li>
@@ -110,17 +111,50 @@ const Pricing = () => {
             <li>Advanced courses</li>
             <li>Priority support</li>
           </ul>
-          <button
-            className="btn"
-            onClick={handlePremiumSubscribe}
-            disabled={subscription === "premium"}
-            style={{
-              background: subscription === "premium" ? "#ccc" : "#207985",
-              cursor: subscription === "premium" ? "not-allowed" : "pointer",
-            }}
-          >
-            {subscription === "premium" ? "Current Plan" : "Select Premium"}
-          </button>
+          <div style={{ marginTop: "1rem" }}>
+            <div style={{ marginBottom: "0.75rem", fontWeight: 600 }}>
+              Pay $3.82 to activate Premium
+            </div>
+            {subscription === "premium" ? (
+              <button className="btn" style={{ background: "#ccc" }} disabled>
+                Current Plan
+              </button>
+            ) : (
+              <div>
+                <div style={{ marginBottom: "0.75rem" }}>
+                  <PayPalButtons
+                    style={{ layout: "vertical", color: "blue" }}
+                    createOrder={(data, actions) => {
+                      return actions.order.create({
+                        purchase_units: [
+                          {
+                            amount: {
+                              value: "3.82",
+                              currency_code: "USD",
+                            },
+                            description: "CourseCode Premium Subscription",
+                          },
+                        ],
+                      });
+                    }}
+                    onApprove={async (data, actions) => {
+                      const details = await actions.order.capture();
+                      console.log("PayPal transaction completed:", details);
+                      localStorage.setItem("subscription", "premium");
+                      setSubscription("premium");
+                      alert(
+                        "Payment successful — you are now a Premium member!"
+                      );
+                    }}
+                    onError={(err) => {
+                      console.error("PayPal error:", err);
+                      alert("Payment failed. Please try again later.");
+                    }}
+                  />
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
