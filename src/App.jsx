@@ -37,7 +37,7 @@ function ErrorBoundary({ children }) {
 
 const paypalOptions = {
   "client-id":
-    "AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R", // PayPal sandbox client ID
+    "AcNMqbTWkH5sdDYCc77yU48MFtRyBWCFJleeww9fZo1Bd7_lJ8Gw_4-DmDHjGSFEp_mQ5Df6Ah489ybV", // PayPal sandbox client ID
   currency: "USD",
   intent: "capture",
 };
