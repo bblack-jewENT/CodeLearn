@@ -45,7 +45,7 @@ const Auth = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: "rgba(0,0,0,0.6)",
+        // backgroundColor: "rgba(0,0,0,0.6)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -55,7 +55,7 @@ const Auth = () => {
     >
       <div
         style={{
-          background: "rgba(255, 255, 255, 0.1)",
+          backgroundColor: "rgba(0,0,0,0.6)",
           backdropFilter: "blur(10px)",
           padding: "1rem",
           borderRadius: "1rem",

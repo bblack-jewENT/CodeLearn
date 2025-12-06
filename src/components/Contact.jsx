@@ -57,13 +57,13 @@ const Contact = ({ onClose }) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        zIndex: 50,
+        zIndex: 100,
         padding: "1rem",
       }}
     >
       <div
         style={{
-          background: "rgba(255, 255, 255, 0.1)",
+          backgroundColor: "rgba(0,0,0,0.6)",
           backdropFilter: "blur(10px)",
           padding: "1rem",
           borderRadius: "1rem",
