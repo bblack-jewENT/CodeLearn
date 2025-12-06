@@ -53,7 +53,7 @@ const Contact = ({ onClose }) => {
         left: 0,
         right: 0,
         bottom: 50,
-        // backgroundColor: "rgba(0,0,0,0.6)",
+        backgroundColor: "rgba(0,0,0,0.6)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
