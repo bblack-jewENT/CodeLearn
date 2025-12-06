@@ -32,7 +32,7 @@ const Home = () => {
       {/* Hero Section */}
       <section
         style={{
-          backgroundImage: "url('https://drive.google.com/file/d/13oiLfeGEY6qma0l0iAH3UYior3f_Rxdg/view?usp=sharing')",
+          backgroundImage: "url('public/church-students1.jpeg')",
           color: "#fff",
           padding: "10rem 0",
           marginTop: "0.8rem",
