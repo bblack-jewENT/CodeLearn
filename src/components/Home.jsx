@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import Contact from "./Contact";
@@ -9,6 +9,8 @@ const Home = () => {
   const coursesRef = useRef();
   const { openAuthModal } = useAuth();
   const [showContactModal, setShowContactModal] = useState(false);
+  const navigate = useNavigate();
+  const [showPricingMsg, setShowPricingMsg] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -209,9 +211,18 @@ const Home = () => {
           <div
             style={{ display: "flex", gap: "1rem", justifyContent: "center" }}
           >
-            <a href="#" className="btn">
+            <button
+              className="btn"
+              onClick={() => {
+                setShowPricingMsg(true);
+                setTimeout(() => {
+                  setShowPricingMsg(false);
+                  navigate("/pricing");
+                }, 1500);
+              }}
+            >
               Join Discord
-            </a>
+            </button>
             <button
               onClick={() => setShowContactModal(true)}
               className="contact-btn"
@@ -220,6 +231,18 @@ const Home = () => {
               Contact Us
             </button>
           </div>
+          {showPricingMsg && (
+            <div
+              style={{
+                marginTop: "1rem",
+                color: "#b91c1c",
+                fontWeight: 600,
+                fontSize: "1.1rem",
+              }}
+            >
+              Please subscribe to access advanced features.
+            </div>
+          )}
         </div>
       </section>
       {showContactModal && (
