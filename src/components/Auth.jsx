@@ -27,10 +27,14 @@ const Auth = () => {
     try {
       if (isSignUp) {
         await signup(formData.email, formData.password, formData.username);
+        // Show message to check email for verification
+        setError(
+          "Account created! Please check your email for a verification link."
+        );
       } else {
         await login(formData.email, formData.password);
+        closeAuthModal(); // Close the modal on success
       }
-      closeAuthModal(); // Close the modal on success
     } catch (err) {
       setError(err.message);
     }

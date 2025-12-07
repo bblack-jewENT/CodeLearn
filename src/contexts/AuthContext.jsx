@@ -5,6 +5,9 @@ import {
   signOut,
   onAuthStateChanged,
   updateProfile,
+  sendEmailVerification,
+  applyActionCode,
+  reload,
 } from "firebase/auth";
 import { auth } from "../services/firebase";
 
@@ -19,14 +22,24 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  function signup(email, password, username) {
-    return createUserWithEmailAndPassword(auth, email, password).then(
-      (userCredential) => {
-        return updateProfile(userCredential.user, {
-          displayName: username,
-        });
-      }
+  async function signup(email, password, username) {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
     );
+    await updateProfile(userCredential.user, { displayName: username });
+    // Send email verification after signup
+    await sendEmailVerification(userCredential.user);
+    return userCredential;
+  }
+
+  // Helper to apply email verification code from link
+  async function verifyEmailActionCode(oobCode) {
+    await applyActionCode(auth, oobCode);
+    if (auth.currentUser) {
+      await reload(auth.currentUser);
+    }
   }
 
   function login(email, password) {
@@ -58,6 +71,7 @@ export function AuthProvider({ children }) {
     showAuthModal,
     openAuthModal,
     closeAuthModal,
+    verifyEmailActionCode,
   };
 
   return (
