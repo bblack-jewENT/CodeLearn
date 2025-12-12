@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 const Assignments = () => {
   const { courseId, lessonId } = useParams();
@@ -7,6 +7,7 @@ const Assignments = () => {
   const subscriptionRaw = localStorage.getItem("subscription") || "free";
   const subscription = String(subscriptionRaw).toLowerCase();
   const isPremium = subscription === "premium";
+  const navigate = useNavigate();
 
   const assignments = {
     1: {
@@ -538,7 +539,7 @@ const Assignments = () => {
         </p>
         <button
           className="btn"
-          onClick={() => (window.location.href = "/pricing")}
+          onClick={() => navigate("/pricing")}
           style={{ marginTop: "1rem" }}
         >
           Upgrade to Premium
