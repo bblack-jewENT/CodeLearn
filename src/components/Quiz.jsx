@@ -2533,13 +2533,32 @@ const Quiz = () => {
               ? "Great job! 👍"
               : "Keep practicing! 💪"}
           </p>
-          <button
-            onClick={resetQuiz}
-            className="btn"
-            style={{ marginTop: "1rem" }}
+          <div
+            style={{
+              display: "flex",
+              gap: "1rem",
+              marginTop: "1rem",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
-            Retake Quiz
-          </button>
+            <button onClick={resetQuiz} className="btn">
+              Retake Quiz
+            </button>
+            {localStorage.getItem("subscription") !== "premium" && (
+              <a
+                href="/pricing"
+                className="btn"
+                style={{
+                  background: "#ffd700",
+                  color: "#000",
+                  fontWeight: "bold",
+                }}
+              >
+                Subscribe to Premium
+              </a>
+            )}
+          </div>
         </div>
       </div>
     );
