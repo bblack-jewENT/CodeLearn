@@ -44,8 +44,7 @@ const Quiz = () => {
             <div className="code-example">
               <pre>
                 <code>
-                  &lt;h1&gt;This is a heading&lt;/h1&gt; &lt;p&gt;This is a
-                  paragraph&lt;/p&gt;
+                  <h1>This is a heading</h1> <p>This is a paragraph</p>
                 </code>
               </pre>
             </div>
@@ -97,8 +96,9 @@ const Quiz = () => {
             <div className="code-nightmare">
               <pre>
                 <code>
-                  &lt;font face="Arial" size="12" color="blue"&gt;
-                  &lt;b&gt;Styled Text&lt;/b&gt; &lt;/font&gt;
+                  <font face="Arial" size="12" color="blue">
+                    <b>Styled Text</b>{" "}
+                  </font>
                 </code>
               </pre>
               <p className="caption">😱 This was actual web design in 1995!</p>
@@ -355,7 +355,6 @@ const Quiz = () => {
     },
     5: {
       title: "Advanced CSS & Modern Layout",
-      image: "/img/college-students.jpg",
       history: () => (
         <div className="lesson-history">
           <div className="timeline-item animate-on-scroll">
@@ -369,9 +368,12 @@ const Quiz = () => {
             <div className="code-nightmare">
               <pre>
                 <code>
-                  &lt;table&gt;
-                  &lt;tr&gt;&lt;td&gt;Navigation&lt;/td&gt;&lt;td&gt;Content&lt;/td&gt;&lt;/tr&gt;
-                  &lt;/table&gt;
+                  <table>
+                    <tr>
+                      <td>Navigation</td>
+                      <td>Content</td>
+                    </tr>
+                  </table>
                 </code>
               </pre>
               <p className="caption">
@@ -444,7 +446,6 @@ const Quiz = () => {
     },
     6: {
       title: "ES6+ & Modern JavaScript",
-      image: "/img/church-students1.jpeg",
       history: () => (
         <div className="lesson-history">
           <div className="timeline-item animate-on-scroll">
@@ -549,7 +550,6 @@ const Quiz = () => {
     },
     7: {
       title: "Advanced React & Performance",
-      image: "/img/college-students1.jpg",
       history: () => (
         <div className="lesson-history">
           <div className="timeline-item animate-on-scroll">
@@ -650,7 +650,6 @@ const Quiz = () => {
     },
     8: {
       title: "Backend Development & APIs",
-      image: "/img/favicon-logo.png",
       history: () => (
         <div className="lesson-history">
           <div className="timeline-item animate-on-scroll">
@@ -743,11 +742,10 @@ const Quiz = () => {
       ),
       overview:
         "Explore backend development with Node.js, databases, REST APIs, authentication, and cloud services. Learn to build robust, scalable server-side applications!",
-      videoId: "UB1O30fR-EE",
+      videoId: "rOpEN1JDaD0",
     },
     9: {
       title: "Database Design & Management",
-      image: "/img/college-students.jpg",
       history: () => (
         <div className="lesson-history">
           <div className="timeline-item animate-on-scroll">
@@ -854,11 +852,10 @@ const Quiz = () => {
       ),
       overview:
         "Master database fundamentals including relational design, SQL, NoSQL databases, normalization, and modern database technologies. Build efficient, scalable data architectures!",
-      videoId: "yfoY53QXEnI",
+      videoId: "6V4miYuD4lA",
     },
     10: {
       title: "Web Security & Best Practices",
-      image: "/img/church-students1.jpeg",
       history: () => (
         <div className="lesson-history">
           <div className="timeline-item animate-on-scroll">
@@ -970,7 +967,532 @@ const Quiz = () => {
       ),
       overview:
         "Master web security fundamentals including authentication, authorization, data protection, common vulnerabilities, and modern security practices. Build secure applications that protect user data!",
-      videoId: "W6NZfCO5SIk",
+      videoId: "YYe0FdfdgDU",
+    },
+    11: {
+      title: "Node.js & Express Fundamentals",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>🍎 The Apple Innovation (2008)</h3>
+            <p>
+              Ryan Dahl at Google was frustrated with the limitations of web
+              servers. He thought, "What if we could run JavaScript on the
+              server?" Using Chrome's V8 JavaScript engine, he created Node.js -
+              a runtime that changed everything!
+            </p>
+            <div className="innovation-moment">
+              <strong>💡 The Lightbulb:</strong> "JavaScript everywhere!"
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>⚡ The Event Loop Revelation</h3>
+            <p>
+              Traditional servers use threading - each request gets its own
+              thread. Node.js used an event loop - one thread handles
+              everything! Perfect for I/O-intensive operations like APIs and
+              real-time apps.
+            </p>
+            <div className="comparison-demo">
+              <div className="threading-model">
+                <strong>Traditional: Multi-threaded</strong>
+                <div className="thread-pool">
+                  <div className="thread">Thread 1</div>
+                  <div className="thread">Thread 2</div>
+                  <div className="thread">Thread 3</div>
+                </div>
+              </div>
+              <div className="event-loop-model">
+                <strong>Node.js: Event Loop</strong>
+                <div className="single-thread">One Thread Handles All!</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>📦 NPM: The Package Ecosystem (2010)</h3>
+            <p>
+              Node Package Manager (NPM) became the largest software registry in
+              the world! Suddenly, developers could share and reuse code
+              effortlessly. Express.js became the most popular web framework!
+            </p>
+            <div className="npm-growth">
+              <div className="growth-stat">
+                <strong>2010:</strong> 1,000 packages
+              </div>
+              <div className="growth-stat">
+                <strong>2023:</strong> 2+ million packages!
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🚀 The Modern Backend (2015-Present)</h3>
+            <p>
+              Node.js evolved with async/await, TypeScript, modern frameworks,
+              and cloud deployment. From simple APIs to microservices, Node.js
+              powers the backend of companies like Netflix, Uber, and LinkedIn!
+            </p>
+            <div className="modern-stack">
+              <div className="tech-item">Express.js</div>
+              <div className="tech-item">TypeScript</div>
+              <div className="tech-item">Docker</div>
+              <div className="tech-item">AWS Lambda</div>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Learn Node.js fundamentals including the event loop, npm ecosystem, Express.js framework, and modern backend development patterns. Build scalable server-side applications!",
+      videoId: "fBNz5xF-Kx4",
+    },
+    12: {
+      title: "Database Integration & ORM",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>📊 The Database Revolution (1970s-1990s)</h3>
+            <p>
+              Before databases, applications stored data in files. Edgar Codd's
+              relational model changed everything - structured tables with
+              relationships! SQL became the universal language for data.
+            </p>
+            <div className="evolution-timeline">
+              <div className="era">
+                <strong>Files</strong>
+                <p>🔳 Plain text files</p>
+              </div>
+              <div className="arrow">➡️</div>
+              <div className="era">
+                <strong>Relational DB</strong>
+                <p>📋 Structured tables</p>
+              </div>
+              <div className="arrow">➡️</div>
+              <div className="era">
+                <strong>NoSQL</strong>
+                <p>📄 Flexible schemas</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🔗 The Object-Relational Mismatch (1990s-2000s)</h3>
+            <p>
+              Object-oriented programming didn't match relational databases.
+              Developers wrote tons of SQL queries and manual mapping code.
+              Something had to bridge this gap!
+            </p>
+            <div className="mapping-nightmare">
+              <div className="object-side">
+                <strong>Objects</strong>
+                <code>user.posts[0].title</code>
+              </div>
+              <div className="mapping-arrow">🔄</div>
+              <div className="database-side">
+                <strong>Database</strong>
+                <code>SELECT title FROM posts WHERE user_id = ?</code>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🛠️ The ORM Solution (2000s-2010s)</h3>
+            <p>
+              Object-Relational Mapping (ORM) frameworks like Hibernate (Java),
+              SQLAlchemy (Python), and Sequelize (JavaScript) automated the
+              mapping between objects and database tables!
+            </p>
+            <div className="orm-benefits">
+              <div className="benefit">
+                <strong>Less SQL</strong>
+                <p>Write JavaScript instead of SQL</p>
+              </div>
+              <div className="benefit">
+                <strong>Type Safety</strong>
+                <p>Catch errors at compile time</p>
+              </div>
+              <div className="benefit">
+                <strong>Portability</strong>
+                <p>Switch databases easily</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>☁️ Modern Database Patterns (2015-Present)</h3>
+            <p>
+              Today's applications use multiple databases - PostgreSQL for
+              transactions, MongoDB for documents, Redis for caching, and more.
+              ORMs evolved to handle this complexity!
+            </p>
+            <div className="polyglot-persistence">
+              <div className="db-type">PostgreSQL</div>
+              <div className="db-type">MongoDB</div>
+              <div className="db-type">Redis</div>
+              <div className="db-type">Elasticsearch</div>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Master database integration with Node.js including SQL vs NoSQL databases, ORM frameworks, connection pooling, and modern data persistence patterns. Build robust data layers!",
+      videoId: "7S_tz1z_5bA",
+    },
+    13: {
+      title: "API Design & Architecture",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>🔌 The API Economy (1990s-2000s)</h3>
+            <p>
+              In the early web, services were siloed. Salesforce pioneered the
+              idea of exposing business logic through APIs. Suddenly, developers
+              could integrate external services into their applications!
+            </p>
+            <div className="api-pioneers">
+              <div className="pioneer">
+                <strong>Salesforce API</strong>
+                <p>First major business API</p>
+              </div>
+              <div className="pioneer">
+                <strong>eBay API</strong>
+                <p>Marketplace integration</p>
+              </div>
+              <div className="pioneer">
+                <strong>Amazon API</strong>
+                <p>Product data access</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🎯 REST: The Architectural Style (2000)</h3>
+            <p>
+              Roy Fielding's dissertation introduced REST - Representational
+              State Transfer. It wasn't a protocol, but a set of constraints for
+              building scalable web services. GET, POST, PUT, DELETE became
+              universal!
+            </p>
+            <div className="rest-principles">
+              <div className="principle">Stateless</div>
+              <div className="principle">Cacheable</div>
+              <div className="principle">Uniform Interface</div>
+              <div className="principle">Layered System</div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>📱 Mobile & Web 2.0 Explosion (2007-2012)</h3>
+            <p>
+              The iPhone launch and social media boom created demand for APIs.
+              Twitter API, Facebook Graph API, and Google Maps API became the
+              foundation for thousands of apps. API-first design was born!
+            </p>
+            <div className="api-explosion">
+              <div className="api-category">
+                <strong>Social</strong>
+                <p>Twitter, Facebook, LinkedIn</p>
+              </div>
+              <div className="api-category">
+                <strong>Payment</strong>
+                <p>Stripe, PayPal</p>
+              </div>
+              <div className="api-category">
+                <strong>Maps</strong>
+                <p>Google, Mapbox</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🚀 Modern API Patterns (2015-Present)</h3>
+            <p>
+              Today's APIs are sophisticated: GraphQL for flexible queries, gRPC
+              for high performance, WebSocket for real-time, and API gateways
+              for microservices. The API is the product!
+            </p>
+            <div className="modern-api-stack">
+              <div className="api-tech">GraphQL</div>
+              <div className="api-tech">gRPC</div>
+              <div className="api-tech">WebSocket</div>
+              <div className="api-tech">API Gateway</div>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Design and build RESTful APIs with proper HTTP methods, status codes, error handling, authentication, and documentation. Learn modern API patterns including GraphQL and WebSocket!",
+      videoId: "-MTSQ37sVOg",
+    },
+    14: {
+      title: "User Experience Fundamentals",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>🖥️ The Interface Revolution (1970s-1980s)</h3>
+            <p>
+              Before GUIs, computers were text-only! Xerox PARC invented the
+              graphical user interface with windows, icons, and mouse. Apple's
+              Macintosh in 1984 brought this to consumers. User interfaces were
+              born!
+            </p>
+            <div className="ui-evolution">
+              <div className="era">
+                <strong>Command Line</strong>
+                <p>⌨️ Text commands only</p>
+              </div>
+              <div className="arrow">➡️</div>
+              <div className="era">
+                <strong>GUI</strong>
+                <p>🖱️ Visual interface</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🧠 The Cognitive Science Connection (1990s)</h3>
+            <p>
+              Donald Norman's "Design of Everyday Things" revolutionized how we
+              think about user experience. He coined "user-centered design" and
+              introduced concepts like affordances and signifiers!
+            </p>
+            <div className="ux-principles">
+              <div className="principle">
+                <strong>Affordances</strong>
+                <p>What can be done with an object</p>
+              </div>
+              <div className="principle">
+                <strong>Signifiers</strong>
+                <p>Indicators of what to do</p>
+              </div>
+              <div className="principle">
+                <strong>Feedback</strong>
+                <p>Response to user actions</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>📱 The Mobile UX Shift (2007-2010)</h3>
+            <p>
+              The iPhone changed everything! Touch interfaces required new
+              design patterns: swipe gestures, pinch-to-zoom, and thumb-friendly
+              design. UX became mobile-first!
+            </p>
+            <div className="mobile-patterns">
+              <div className="pattern">Swipe Navigation</div>
+              <div className="pattern">Pull-to-Refresh</div>
+              <div className="pattern">Bottom Navigation</div>
+              <div className="pattern">Card-based UI</div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🌟 Modern UX Design (2010-Present)</h3>
+            <p>
+              Today's UX encompasses the entire user journey: research, design,
+              testing, and optimization. Tools like Figma, user testing
+              platforms, and analytics have made UX more scientific and
+              data-driven!
+            </p>
+            <div className="modern-ux-toolkit">
+              <div className="tool">Figma</div>
+              <div className="tool">User Testing</div>
+              <div className="tool">Analytics</div>
+              <div className="tool">A/B Testing</div>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Learn user experience fundamentals including user research, information architecture, interaction design, usability principles, and the complete UX design process. Create intuitive, user-centered designs!",
+      videoId: "6qLq7xkodA8",
+    },
+    15: {
+      title: "Visual Design & Branding",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>🎨 The Bauhaus Revolution (1919-1933)</h3>
+            <p>
+              The German Bauhaus school changed design forever! They combined
+              art, craft, and technology. "Form follows function" became the
+              mantra. Modern design was born from this revolutionary approach!
+            </p>
+            <div className="bauhaus-principles">
+              <div className="principle">Function First</div>
+              <div className="principle">Minimalism</div>
+              <div className="principle">Typography Focus</div>
+              <div className="principle">Geometric Shapes</div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🖥️ Digital Design Emergence (1980s-1990s)</h3>
+            <p>
+              Desktop publishing with Adobe PageMaker and later Photoshop
+              democratized design. Suddenly, anyone could create professional-
+              looking materials. The design industry was transformed!
+            </p>
+            <div className="digital-tools">
+              <div className="tool">
+                <strong>Photoshop</strong>
+                <p>Image editing (1990)</p>
+              </div>
+              <div className="tool">
+                <strong>Illustrator</strong>
+                <p>Vector graphics (1987)</p>
+              </div>
+              <div className="tool">
+                <strong>InDesign</strong>
+                <p>Layout design (1999)</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>📱 The Brand Identity Explosion (2000s-2010s)</h3>
+            <p>
+              As brands went digital, visual identity became crucial. Apple,
+              Google, and Airbnb created iconic, memorable brands. Color
+              psychology, typography systems, and visual consistency rules
+              emerged!
+            </p>
+            <div className="brand-evolution">
+              <div className="brand-aspect">
+                <strong>Color</strong>
+                <p>Psychology & Emotion</p>
+              </div>
+              <div className="brand-aspect">
+                <strong>Typography</strong>
+                <p>Voice & Personality</p>
+              </div>
+              <div className="brand-aspect">
+                <strong>Icons</strong>
+                <p>Recognition & Memory</p>
+              </div>
+              <div className="brand-aspect">
+                <strong>Layout</strong>
+                <p>Hierarchy & Flow</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🚀 Modern Design Systems (2015-Present)</h3>
+            <p>
+              Today's brands need consistency across platforms. Design systems
+              with components, guidelines, and tokens ensure cohesive brand
+              experiences everywhere - from mobile apps to websites!
+            </p>
+            <div className="design-systems">
+              <div className="system">Material Design</div>
+              <div className="system">Apple HIG</div>
+              <div className="system">Carbon Design</div>
+              <div className="system">Lightning Design</div>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Master visual design principles including color theory, typography, layout, branding, and design systems. Create compelling visual experiences that communicate effectively and build brand recognition!",
+      videoId: "QuQVpNuRmd4",
+    },
+    16: {
+      title: "Prototyping & User Testing",
+      history: () => (
+        <div className="lesson-history">
+          <div className="timeline-item animate-on-scroll">
+            <h3>📋 The Paper Prototype Era (1960s-1990s)</h3>
+            <p>
+              Early designers used paper sketches and cardboard cutouts to test
+              interfaces. It was cheap, fast, and anyone could do it! The
+              foundation of rapid prototyping was laid with simple materials.
+            </p>
+            <div className="prototype-evolution">
+              <div className="method">
+                <strong>Paper Sketches</strong>
+                <p>✏️ Hand-drawn interfaces</p>
+              </div>
+              <div className="method">
+                <strong>Storyboards</strong>
+                <p>🎬 Step-by-step flows</p>
+              </div>
+              <div className="method">
+                <strong>Card Sorting</strong>
+                <p>🃏 Information architecture</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>💻 Digital Prototyping Tools (2000s-2010s)</h3>
+            <p>
+              Software like Axure RP, Balsamiq, and later Sketch and Figma
+              revolutionized prototyping. Designers could create interactive
+              prototypes that felt real without coding!
+            </p>
+            <div className="tool-timeline">
+              <div className="era">
+                <strong>2000s:</strong> Axure, Balsamiq
+              </div>
+              <div className="era">
+                <strong>2010s:</strong> Sketch, InVision
+              </div>
+              <div className="era">
+                <strong>2020s:</strong> Figma, ProtoPie
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🧪 The Testing Revolution (2005-2015)</h3>
+            <p>
+              Companies like Google and Apple popularized user testing. "Move
+              fast and break things" evolved to "test fast and learn faster."
+              Remote testing tools made it possible to test with users
+              worldwide!
+            </p>
+            <div className="testing-methods">
+              <div className="method">
+                <strong>Usability Testing</strong>
+                <p>👥 Watch users interact</p>
+              </div>
+              <div className="method">
+                <strong>A/B Testing</strong>
+                <p>🔄 Compare versions</p>
+              </div>
+              <div className="method">
+                <strong>Heatmaps</strong>
+                <p>🔥 See user behavior</p>
+              </div>
+              <div className="method">
+                <strong>Analytics</strong>
+                <p>📊 Measure engagement</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🤖 AI-Powered Design (2020-Present)</h3>
+            <p>
+              Today's prototypes can be voice-controlled, AR/VR experiences, or
+              even generated by AI! Tools like Framer, Protopie, and AI
+              assistants are making prototyping faster and more accessible.
+            </p>
+            <div className="future-prototyping">
+              <div className="tech">Voice Prototypes</div>
+              <div className="tech">AR/VR Testing</div>
+              <div className="tech">AI Generation</div>
+              <div className="tech">Code-to-Prototype</div>
+            </div>
+          </div>
+        </div>
+      ),
+      overview:
+        "Learn prototyping methodologies and user testing techniques including wireframing, interactive prototyping, usability testing, A/B testing, and how to gather and act on user feedback effectively!",
+      videoId: "PZ2hchA4Jvg",
     },
   };
 
@@ -1452,6 +1974,309 @@ const Quiz = () => {
           "Using two different authentication methods",
           "Logging in twice",
           "Using two different browsers",
+        ],
+        correct: 1,
+      },
+    ],
+    11: [
+      // Node.js & Express Fundamentals
+      {
+        question: "What is Node.js?",
+        options: [
+          "A JavaScript library for frontend development",
+          "A JavaScript runtime built on Chrome's V8 engine",
+          "A database management system",
+          "A CSS framework",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is the main advantage of Node.js event loop?",
+        options: [
+          "It makes JavaScript run faster than other languages",
+          "It handles I/O operations efficiently with non-blocking calls",
+          "It automatically optimizes code",
+          "It manages memory automatically",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is Express.js?",
+        options: [
+          "A database",
+          "A minimal and flexible Node.js web application framework",
+          "A JavaScript testing library",
+          "A CSS preprocessor",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What does NPM stand for?",
+        options: [
+          "Node Package Manager",
+          "New Project Manager",
+          "Node Program Manager",
+          "Network Package Manager",
+        ],
+        correct: 0,
+      },
+      {
+        question: "Which command initializes a new Node.js project?",
+        options: ["node init", "npm start", "npm init", "node new"],
+        correct: 2,
+      },
+    ],
+    12: [
+      // Database Integration & ORM
+      {
+        question: "What is an ORM?",
+        options: [
+          "Object-Relational Mapping",
+          "Online Resource Manager",
+          "Object-Runtime Module",
+          "Open Relational Model",
+        ],
+        correct: 0,
+      },
+      {
+        question: "What are the benefits of using an ORM?",
+        options: [
+          "Faster database queries",
+          "Automatic code generation and type safety",
+          "Better security",
+          "All of the above",
+        ],
+        correct: 3,
+      },
+      {
+        question: "Which of these is a popular ORM for Node.js?",
+        options: ["Sequelize", "Hibernate", "Entity Framework", "Django ORM"],
+        correct: 0,
+      },
+      {
+        question: "What is connection pooling?",
+        options: [
+          "Creating multiple database connections for each query",
+          "Reusing database connections to improve performance",
+          "Storing database queries in memory",
+          "Encrypting database connections",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What does ACID stand for in database transactions?",
+        options: [
+          "Atomicity, Consistency, Isolation, Durability",
+          "Automatic, Consistent, Independent, Durable",
+          "Applied, Configured, Integrated, Deployed",
+          "Association, Control, Implementation, Development",
+        ],
+        correct: 0,
+      },
+    ],
+    13: [
+      // API Design & Architecture
+      {
+        question: "What is the main principle of RESTful API design?",
+        options: [
+          "Use complex authentication methods",
+          "Stateless communication between client and server",
+          "Always return JSON format",
+          "Use POST requests for everything",
+        ],
+        correct: 1,
+      },
+      {
+        question: "Which HTTP status code indicates a successful request?",
+        options: ["200", "404", "500", "301"],
+        correct: 0,
+      },
+      {
+        question: "What is GraphQL?",
+        options: [
+          "A database",
+          "A query language for APIs that allows clients to request specific data",
+          "A JavaScript framework",
+          "A CSS methodology",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is API versioning?",
+        options: [
+          "Updating APIs frequently",
+          "Managing different versions of APIs to maintain backward compatibility",
+          "Making APIs faster",
+          "Securing APIs with passwords",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is the purpose of API documentation?",
+        options: [
+          "To make APIs look professional",
+          "To help developers understand how to use the API",
+          "To secure the API",
+          "To speed up API responses",
+        ],
+        correct: 1,
+      },
+    ],
+    14: [
+      // User Experience Fundamentals
+      {
+        question: "What does UX stand for?",
+        options: [
+          "User Experience",
+          "Universal Design",
+          "User Interface",
+          "User Integration",
+        ],
+        correct: 0,
+      },
+      {
+        question: "What is user-centered design?",
+        options: [
+          "Designing for the developer's convenience",
+          "Designing based on user needs, behaviors, and goals",
+          "Making designs look modern",
+          "Creating complex interfaces",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What are affordances in UX design?",
+        options: [
+          "The visual appearance of objects",
+          "Properties that show users what actions they can perform",
+          "The color scheme of an interface",
+          "The text content of a page",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is information architecture?",
+        options: [
+          "The visual design of a website",
+          "The way content is organized and labeled",
+          "The database structure",
+          "The server configuration",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is the primary goal of user testing?",
+        options: [
+          "To validate design decisions with real users",
+          "To show off the product to stakeholders",
+          "To test the technical implementation",
+          "To measure performance metrics",
+        ],
+        correct: 0,
+      },
+    ],
+    15: [
+      // Visual Design & Branding
+      {
+        question: "What is the main principle of color theory?",
+        options: [
+          "Use as many colors as possible",
+          "Understand how colors interact and affect emotions",
+          "Always use bright colors",
+          "Never use more than three colors",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is typography?",
+        options: [
+          "The art of designing with text",
+          "A type of database",
+          "A programming language",
+          "A design tool",
+        ],
+        correct: 0,
+      },
+      {
+        question: "What is a design system?",
+        options: [
+          "A collection of design rules and components",
+          "A software program",
+          "A design conference",
+          "A type of computer",
+        ],
+        correct: 0,
+      },
+      {
+        question: "What is brand consistency?",
+        options: [
+          "Using the same colors everywhere",
+          "Maintaining uniform visual identity across all touchpoints",
+          "Having the same logo size",
+          "Using only one font",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is the purpose of white space in design?",
+        options: [
+          "To waste space",
+          "To improve readability and visual hierarchy",
+          "To make the design look empty",
+          "To save printing costs",
+        ],
+        correct: 1,
+      },
+    ],
+    16: [
+      // Prototyping & User Testing
+      {
+        question: "What is the purpose of prototyping?",
+        options: [
+          "To create the final product",
+          "To test ideas and gather feedback before development",
+          "To impress clients",
+          "To save development time only",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is A/B testing?",
+        options: [
+          "Testing two versions of a design to see which performs better",
+          "Testing accessibility only",
+          "Testing with two different browsers",
+          "Testing database performance",
+        ],
+        correct: 0,
+      },
+      {
+        question: "What are wireframes?",
+        options: [
+          "Detailed visual designs",
+          "Low-fidelity layouts showing structure and content",
+          "Database schemas",
+          "Code documentation",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is usability testing?",
+        options: [
+          "Testing if the code works",
+          "Observing users as they interact with a product to identify issues",
+          "Testing server performance",
+          "Testing security features",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What is a user journey map?",
+        options: [
+          "A map of physical locations",
+          "A visualization of the user's experience through the product",
+          "A database of user data",
+          "A network diagram",
         ],
         correct: 1,
       },

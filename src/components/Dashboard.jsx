@@ -16,6 +16,18 @@ const Dashboard = () => {
     { id: 2, title: "CSS Styling", lessons: 3 },
     { id: 3, title: "JavaScript Fundamentals", lessons: 3 },
     { id: 4, title: "React Components", lessons: 3 },
+    { id: 5, title: "Advanced CSS & Modern Layout", lessons: 3 },
+    { id: 6, title: "ES6+ & Modern JavaScript", lessons: 3 },
+    { id: 7, title: "Advanced React & Performance", lessons: 3 },
+    { id: 8, title: "Backend Development & APIs", lessons: 3 },
+    { id: 9, title: "Database Design & Management", lessons: 3 },
+    { id: 10, title: "Web Security & Best Practices", lessons: 3 },
+    { id: 11, title: "Node.js & Express Fundamentals", lessons: 3 },
+    { id: 12, title: "Database Integration & ORM", lessons: 3 },
+    { id: 13, title: "API Design & Architecture", lessons: 3 },
+    { id: 14, title: "User Experience Fundamentals", lessons: 3 },
+    { id: 15, title: "Visual Design & Branding", lessons: 3 },
+    { id: 16, title: "Prototyping & User Testing", lessons: 3 },
   ];
 
   const getCourseProgress = (courseId) => {

@@ -510,6 +510,306 @@ const Assignments = () => {
         ],
       },
     },
+    11: {
+      1: {
+        title: "Create a Real-time Notification System",
+        description:
+          "Build a notification system using WebSocket connections with message queuing and delivery confirmation.",
+        tasks: [
+          "Implement WebSocket server with connection management",
+          "Create message queuing system for offline users",
+          "Add delivery confirmation and read receipts",
+          "Implement notification categories and filtering",
+          "Add real-time typing indicators and presence",
+        ],
+        resources: [
+          "Socket.io: https://socket.io/",
+          "WebSocket API: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+        ],
+      },
+      2: {
+        title: "Build a Microservices Architecture Demo",
+        description:
+          "Create a microservices application with multiple services, API gateway, and service communication.",
+        tasks: [
+          "Design microservices architecture with clear boundaries",
+          "Implement API gateway for request routing",
+          "Add inter-service communication using HTTP/REST",
+          "Create service discovery and health checking",
+          "Implement distributed logging and monitoring",
+        ],
+        resources: [
+          "Microservices: https://microservices.io/",
+          "API Gateway: https://aws.amazon.com/api-gateway/",
+        ],
+      },
+      3: {
+        title: "Implement Node.js Performance Monitoring",
+        description:
+          "Build a comprehensive performance monitoring system for Node.js applications.",
+        tasks: [
+          "Set up application performance monitoring (APM)",
+          "Implement custom metrics and tracing",
+          "Create alerting system for performance degradation",
+          "Add memory leak detection and profiling",
+          "Implement distributed tracing across services",
+        ],
+        resources: [
+          "Node.js Performance: https://nodejs.org/en/docs/guides/",
+          "APM Best Practices: https://www.datadoghq.com/knowledge-center/apm/",
+        ],
+      },
+    },
+    12: {
+      1: {
+        title: "Build a Multi-Database Application",
+        description:
+          "Create an application that uses both SQL and NoSQL databases for different data storage needs.",
+        tasks: [
+          "Design data partitioning strategy across databases",
+          "Implement PostgreSQL for relational data",
+          "Add MongoDB for document storage",
+          "Create data synchronization between databases",
+          "Implement backup and recovery procedures",
+        ],
+        resources: [
+          "PostgreSQL: https://www.postgresql.org/docs/",
+          "MongoDB: https://docs.mongodb.com/",
+        ],
+      },
+      2: {
+        title: "Create a Database Migration System",
+        description:
+          "Build a robust database migration system with version control and rollback capabilities.",
+        tasks: [
+          "Design migration versioning system",
+          "Implement forward and rollback migrations",
+          "Add data validation and integrity checks",
+          "Create migration history and audit trail",
+          "Implement zero-downtime deployment strategy",
+        ],
+        resources: [
+          "Database Migrations: https://sequelize.org/docs/v6/other-topics/migrations/",
+          "Migration Best Practices: https://www.prisma.io/docs/guides/migrate-to-prisma/migrate-from-sequelize-to-prisma",
+        ],
+      },
+      3: {
+        title: "Build a Database Analytics Dashboard",
+        description:
+          "Create a real-time analytics dashboard with database optimization for large datasets and complex queries.",
+        tasks: [
+          "Design database schema for analytics data",
+          "Implement data aggregation and ETL processes",
+          "Create efficient queries with proper indexing",
+          "Add real-time data streaming capabilities",
+          "Build visualization components for analytics",
+        ],
+        resources: [
+          "Data Warehousing: https://en.wikipedia.org/wiki/Data_warehouse",
+          "ETL Processes: https://en.wikipedia.org/wiki/Extract,_transform,_load",
+        ],
+      },
+    },
+    13: {
+      1: {
+        title: "Build a Microservices Architecture Demo",
+        description:
+          "Create a microservices application with multiple services, API gateway, and service communication.",
+        tasks: [
+          "Design microservices architecture with clear boundaries",
+          "Implement API gateway for request routing",
+          "Add inter-service communication using HTTP/REST",
+          "Create service discovery and health checking",
+          "Implement distributed logging and monitoring",
+        ],
+        resources: [
+          "Microservices: https://microservices.io/",
+          "API Gateway: https://aws.amazon.com/api-gateway/",
+        ],
+      },
+      2: {
+        title: "Create a GraphQL API with Federation",
+        description:
+          "Build a federated GraphQL API that combines multiple data sources into a unified schema.",
+        tasks: [
+          "Design GraphQL schema for multiple services",
+          "Implement Apollo Federation",
+          "Add resolver composition and data stitching",
+          "Create type safety with code generation",
+          "Implement subscription and real-time features",
+        ],
+        resources: [
+          "Apollo Federation: https://www.apollographql.com/docs/federation/",
+          "GraphQL: https://graphql.org/learn/",
+        ],
+      },
+      3: {
+        title: "Build an API Rate Limiting System",
+        description:
+          "Create a sophisticated rate limiting system with multiple algorithms and user tiers.",
+        tasks: [
+          "Implement sliding window and token bucket algorithms",
+          "Add user-tier-based rate limiting",
+          "Create distributed rate limiting with Redis",
+          "Implement rate limit headers and analytics",
+          "Add graceful degradation and circuit breakers",
+        ],
+        resources: [
+          "Rate Limiting Algorithms: https://en.wikipedia.org/wiki/Rate_limiting",
+          "Redis: https://redis.io/documentation",
+        ],
+      },
+    },
+    14: {
+      1: {
+        title: "Conduct Comprehensive User Research",
+        description:
+          "Plan and execute a complete user research study including interviews, surveys, and usability testing.",
+        tasks: [
+          "Define research objectives and user personas",
+          "Create interview and survey questions",
+          "Recruit and conduct user interviews",
+          "Analyze data and identify key insights",
+          "Present findings with actionable recommendations",
+        ],
+        resources: [
+          "User Research Methods: https://www.nngroup.com/articles/ux-research-cheat-sheet/",
+          "Interview Guide: https://www.uxmatters.com/authors/mike-kuni/2020/01/07/ux-interview-questions",
+        ],
+      },
+      2: {
+        title: "Design Information Architecture",
+        description:
+          "Create a comprehensive information architecture for a complex website or application.",
+        tasks: [
+          "Conduct card sorting exercises with users",
+          "Create site maps and navigation hierarchies",
+          "Design labeling systems and taxonomy",
+          "Implement search functionality and filters",
+          "Test and iterate on the information architecture",
+        ],
+        resources: [
+          "Information Architecture: https://www.boxesandarrows.com/",
+          "Card Sorting: https://www.nngroup.com/articles/card-sorting/",
+        ],
+      },
+      3: {
+        title: "Create a User Journey Map",
+        description:
+          "Design detailed user journey maps that capture the complete experience across touchpoints.",
+        tasks: [
+          "Map user goals and pain points",
+          "Identify key touchpoints and interactions",
+          "Document emotional states throughout the journey",
+          "Highlight opportunities for improvement",
+          "Present insights to stakeholders with recommendations",
+        ],
+        resources: [
+          "Journey Mapping: https://www.nngroup.com/articles/ux-design-cheat-sheet/",
+          "User Journey Templates: https://www.smashingmagazine.com/2015/01/designing-effective-print-and-web-forms/",
+        ],
+      },
+    },
+    15: {
+      1: {
+        title: "Create a Complete Brand Identity System",
+        description:
+          "Design a comprehensive brand identity including logo, color palette, typography, and style guide.",
+        tasks: [
+          "Research brand positioning and target audience",
+          "Create logo concepts and refine final design",
+          "Develop color palette with psychological considerations",
+          "Select and pair typography for brand voice",
+          "Document brand guidelines in style guide",
+        ],
+        resources: [
+          "Brand Identity Design: https://www.canva.com/learn/brand-identity-design/",
+          "Color Theory: https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm",
+        ],
+      },
+      2: {
+        title: "Design a Design System",
+        description:
+          "Build a comprehensive design system with components, guidelines, and documentation.",
+        tasks: [
+          "Audit existing design patterns and components",
+          "Create component library with variations",
+          "Define design tokens (colors, typography, spacing)",
+          "Write component documentation and usage guidelines",
+          "Implement design system in code",
+        ],
+        resources: [
+          "Design Systems: https://www.designbetter.co/design-systems-handbook",
+          "Component Libraries: https://storybook.js.org/",
+        ],
+      },
+      3: {
+        title: "Create an Accessibility-Focused Design",
+        description:
+          "Design a website or application that meets WCAG accessibility guidelines.",
+        tasks: [
+          "Implement WCAG 2.1 AA compliance",
+          "Design for screen readers and keyboard navigation",
+          "Create high contrast and scalable interfaces",
+          "Test with assistive technologies",
+          "Document accessibility considerations",
+        ],
+        resources: [
+          "WCAG Guidelines: https://www.w3.org/WAI/WCAG21/quickref/",
+          "Accessibility Design: https://webaim.org/articles/",
+        ],
+      },
+    },
+    16: {
+      1: {
+        title: "Build and Test an Interactive Prototype",
+        description:
+          "Create a high-fidelity interactive prototype and conduct user testing to validate design decisions.",
+        tasks: [
+          "Create interactive prototype using Figma or similar tool",
+          "Define user testing scenarios and success metrics",
+          "Recruit participants for usability testing",
+          "Conduct moderated testing sessions",
+          "Analyze results and iterate on design",
+        ],
+        resources: [
+          "Prototyping Tools: https://www.figma.com/prototyping/",
+          "Usability Testing: https://www.nngroup.com/articles/usability-testing-101/",
+        ],
+      },
+      2: {
+        title: "Conduct A/B Testing Study",
+        description:
+          "Design and execute an A/B test to compare two design variations and measure their effectiveness.",
+        tasks: [
+          "Define hypothesis and success metrics",
+          "Create two design variations to test",
+          "Set up A/B testing framework and analytics",
+          "Run test with sufficient sample size",
+          "Analyze results and implement winning design",
+        ],
+        resources: [
+          "A/B Testing: https://www.optimizely.com/optimization-glossary/ab-testing/",
+          "Statistical Significance: https://www.optimizely.com/optimization-glossary/statistical-significance/",
+        ],
+      },
+      3: {
+        title: "Create a Design Testing Framework",
+        description:
+          "Build a comprehensive framework for ongoing design validation and continuous improvement.",
+        tasks: [
+          "Define design testing methodologies",
+          "Create testing templates and checklists",
+          "Implement automated testing tools",
+          "Set up feedback collection systems",
+          "Establish metrics for design quality",
+        ],
+        resources: [
+          "Design Testing: https://www.designcouncil.org.uk/our-work/skills-learning/tools-frameworks/design-testing/",
+          "Continuous Design: https://uxdesign.cc/continuous-design-b8a6e7c9c2ea",
+        ],
+      },
+    },
   };
 
   const assignment = assignments[Number(courseId)]?.[Number(lessonId)];
