@@ -1,19 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getPersistedItem, setPersistedItem } from "../services/persist";
 import { PayPalButtons } from "@paypal/react-paypal-js";
 
 const Pricing = () => {
-  const [subscription, setSubscription] = useState(
-    localStorage.getItem("subscription") || "free"
-  );
+  const [subscription, setSubscription] = useState("free");
 
-  const handleFreeSubscribe = () => {
-    localStorage.setItem("subscription", "free");
+  useEffect(() => {
+    getPersistedItem("subscription", "free").then(setSubscription);
+  }, []);
+
+  const handleFreeSubscribe = async () => {
+    await setPersistedItem("subscription", "free");
     setSubscription("free");
     alert("Switched to Free plan!");
   };
 
-  const handlePremiumSubscribe = () => {
-    localStorage.setItem("subscription", "premium");
+  const handlePremiumSubscribe = async () => {
+    await setPersistedItem("subscription", "premium");
     setSubscription("premium");
     alert("Switched to Premium plan!");
   };
@@ -140,7 +143,7 @@ const Pricing = () => {
                     onApprove={async (data, actions) => {
                       const details = await actions.order.capture();
                       console.log("PayPal transaction completed:", details);
-                      localStorage.setItem("subscription", "premium");
+                      await setPersistedItem("subscription", "premium");
                       setSubscription("premium");
                       alert(
                         "Payment successful — you are now a Premium member!"

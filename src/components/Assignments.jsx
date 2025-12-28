@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getPersistedItem } from "../services/persist";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
 const Assignments = () => {
   const { courseId, lessonId } = useParams();
   const [url, setUrl] = useState("");
-  const subscriptionRaw = localStorage.getItem("subscription") || "free";
+  const [subscriptionRaw, setSubscriptionRaw] = useState("free");
+  useEffect(() => {
+    getPersistedItem("subscription", "free").then(setSubscriptionRaw);
+  }, []);
   const subscription = String(subscriptionRaw).toLowerCase();
   const isPremium = subscription === "premium";
   const navigate = useNavigate();

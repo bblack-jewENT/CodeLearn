@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { getPersistedItem } from "../services/persist";
 import { useParams, useNavigate } from "react-router-dom";
 
 const Quiz = () => {
@@ -10,6 +11,10 @@ const Quiz = () => {
   const [showResult, setShowResult] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [answers, setAnswers] = useState([]);
+  const [subscription, setSubscription] = useState("free");
+  useEffect(() => {
+    getPersistedItem("subscription", "free").then(setSubscription);
+  }, []);
 
   // Mock lesson data with enhanced content
   const lessonData = {
@@ -2322,12 +2327,13 @@ const Quiz = () => {
       localStorage.setItem("codelearn-progress", JSON.stringify(progress));
 
       // Check subscription and redirect premium users to assignments
-      const subscription = localStorage.getItem("subscription") || "free";
-      if (subscription === "premium") {
-        navigate(`/assignments/${courseId}/${lessonId}`);
-      } else {
-        setShowResult(true);
-      }
+      getPersistedItem("subscription", "free").then((subscription) => {
+        if (subscription === "premium") {
+          navigate(`/assignments/${courseId}/${lessonId}`);
+        } else {
+          setShowResult(true);
+        }
+      });
     }
   };
 
@@ -2545,7 +2551,7 @@ const Quiz = () => {
             <button onClick={resetQuiz} className="btn">
               Retake Quiz
             </button>
-            {localStorage.getItem("subscription") !== "premium" && (
+            {subscription !== "premium" && (
               <button
                 className="btn"
                 style={{

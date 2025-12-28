@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+import { getPersistedItem } from "../services/persist";
 
 const Dashboard = () => {
   const [progress, setProgress] = useState({});
-  const subscription = localStorage.getItem("subscription") || "free";
+  const [subscription, setSubscription] = useState("free");
+  useEffect(() => {
+    getPersistedItem("subscription", "free").then(setSubscription);
+  }, []);
 
   useEffect(() => {
     const savedProgress = JSON.parse(

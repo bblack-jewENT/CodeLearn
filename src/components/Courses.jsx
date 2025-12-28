@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getPersistedItem, setPersistedItem } from "../services/persist";
 import LessonCard from "./LessonCard";
 
 const Courses = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const subscription = localStorage.getItem("subscription") || "free";
+  const [subscription, setSubscription] = useState("free");
+
+  useEffect(() => {
+    getPersistedItem("subscription", "free").then(setSubscription);
+  }, []);
 
   const courses = [
     {
