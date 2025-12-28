@@ -13,6 +13,7 @@ import Assignments from "./components/Assignments";
 import Dashboard from "./components/Dashboard";
 import Pricing from "./components/Pricing";
 import Settings from "./components/Settings";
+import "./lesson-responsive.css";
 
 function ErrorBoundary({ children }) {
   const [error, setError] = useState(null);
@@ -102,6 +103,5 @@ function App() {
     </PayPalScriptProvider>
   );
 }
-import "./lesson-responsive.css";
 
 export default App;

@@ -1223,7 +1223,7 @@ const Quiz = () => {
       ),
       overview:
         "Design and build RESTful APIs with proper HTTP methods, status codes, error handling, authentication, and documentation. Learn modern API patterns including GraphQL and WebSocket!",
-      videoId: "-MTSQ37sVOg",
+      videoId: "XvFmUE-36Kc",
     },
     14: {
       title: "User Experience Fundamentals",
