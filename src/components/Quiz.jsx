@@ -2546,17 +2546,17 @@ const Quiz = () => {
               Retake Quiz
             </button>
             {localStorage.getItem("subscription") !== "premium" && (
-              <a
-                href="/pricing"
+              <button
                 className="btn"
                 style={{
                   background: "#ffd700",
                   color: "#000",
                   fontWeight: "bold",
                 }}
+                onClick={() => navigate("/pricing")}
               >
                 Subscribe to Premium
-              </a>
+              </button>
             )}
           </div>
         </div>
