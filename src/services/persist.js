@@ -1,11 +1,29 @@
-// Utility for persistent storage using IndexedDB via idb-keyval
-import { get, set } from "idb-keyval";
+// Utility for persistent storage using Firebase Cloud Firestore
+import { db } from "./firebase";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+
+const COLLECTION = "persistent_storage";
 
 export async function getPersistedItem(key, fallback) {
-  const value = await get(key);
-  return value !== undefined ? value : fallback;
+  try {
+    const docRef = doc(db, COLLECTION, key);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      return docSnap.data().value;
+    } else {
+      return fallback;
+    }
+  } catch (error) {
+    console.error("Error getting persisted item:", error);
+    return fallback;
+  }
 }
 
 export async function setPersistedItem(key, value) {
-  await set(key, value);
+  try {
+    const docRef = doc(db, COLLECTION, key);
+    await setDoc(docRef, { value });
+  } catch (error) {
+    console.error("Error setting persisted item:", error);
+  }
 }
