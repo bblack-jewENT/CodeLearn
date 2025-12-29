@@ -23,66 +23,109 @@ const Quiz = () => {
       history: () => (
         <div className="lesson-history">
           <div className="timeline-item animate-on-scroll">
-            <h3>🎯 The Birth of the Web (1989-1991)</h3>
+            <h3>🧪 The Document Revolution (1989)</h3>
             <p>
-              Picture this: You're Tim Berners-Lee, working at CERN in
-              Switzerland. You've got this crazy idea to connect all the
-              research documents together using "hyperlinks" - links that jump
-              between documents. Sound familiar? That's exactly how the World
-              Wide Web was born!
+              Tim Berners-Lee at CERN had a problem: researchers were drowning
+              in information! Their documents were scattered across different
+              systems with no way to connect them. His genius idea? Create a
+              "hypertext" system where documents could reference each other
+              through special links. This wasn't just about organizing
+              information - it was about creating the foundation for human
+              knowledge sharing!
             </p>
-            <div className="fun-fact">
-              <strong>🎪 Fun Fact:</strong> The first website ever created was
-              about the World Wide Web project itself! You can still view it at
-              the World Wide Web Consortium's website.
+            <div className="innovation-highlight">
+              <strong>💡 The Breakthrough:</strong> Unlike previous hypertext
+              systems that were proprietary, Berners-Lee made his invention open
+              and free. This decision shaped the entire internet as we know it
+              today!
             </div>
           </div>
 
           <div className="timeline-item animate-on-scroll">
-            <h3>🏷️ HTML Gets Tagged (1991-1993)</h3>
+            <h3>📜 From SGML to HTML (1991)</h3>
             <p>
-              HTML was initially called "SGML for the web" - but that was way
-              too complicated! So Tim simplified it into a "markup language" -
-              basically adding special tags around text to give it structure and
-              meaning.
+              The initial system used SGML (Standard Generalized Markup
+              Language), but it was like using a sledgehammer to crack a nut!
+              Berners-Lee created a simplified version with just 18 HTML tags.
+              He kept the essential features: tags that mark text, attributes
+              for additional information, and a simple document structure.
             </p>
-            <div className="code-example">
+            <div className="original-tags">
+              <strong>🏷️ The Original 18 Tags:</strong>
               <pre>
                 <code>
-                  <h1>This is a heading</h1> <p>This is a paragraph</p>
+                  &lt;title&gt;, &lt;h1&gt; through &lt;h6&gt;, &lt;p&gt;,
+                  &lt;a&gt;, &lt;img&gt;, &lt;li&gt;, &lt;ul&gt;, &lt;ol&gt;,
+                  &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;, &lt;pre&gt;, &lt;hr&gt;,
+                  &lt;br&gt;, &lt;address&gt;, &lt;em&gt;, &lt;strong&gt;,
+                  &lt;code&gt;
                 </code>
               </pre>
             </div>
           </div>
 
           <div className="timeline-item animate-on-scroll">
-            <h3>🌟 The Browser Wars Begin (1993-1995)</h3>
+            <h3>🌐 Browser Wars & Standards Evolution (1993-1997)</h3>
             <p>
-              Suddenly, everyone wanted to create browsers! Mosaic, Netscape
-              Navigator, Internet Explorer - each trying to "interpret" HTML
-              their own way. This led to the infamous "Browser Wars" where
-              developers had to write different code for different browsers!
+              When Mosaic browser hit the scene in 1993, everything changed.
+              Suddenly, HTML wasn't just for academics - it was for everyone!
+              Netscape Navigator then took the world by storm, but they started
+              adding their own tags. Microsoft fought back with Internet
+              Explorer. This chaos led to the creation of the W3C (World Wide
+              Web Consortium) in 1994 to bring order to the web.
             </p>
-            <div className="historical-note">
-              <strong>📰 Historical Note:</strong> In 1995, both Netscape
-              Navigator and Internet Explorer had different implementations of
-              the same HTML tags - developers had to choose which browser to
-              "break"!
+            <div className="standards-battle">
+              <div className="browser-icon">Mosaic</div>
+              <span>→</span>
+              <div className="browser-icon">Netscape</div>
+              <span>→</span>
+              <div className="browser-icon">IE</div>
+              <p className="caption">
+                Each browser tried to outdo the others with proprietary
+                features!
+              </p>
             </div>
           </div>
 
           <div className="timeline-item animate-on-scroll">
-            <h3>🚀 Modern HTML (1997-Present)</h3>
+            <h3>🏗️ Semantic Web Dreams (1997-2004)</h3>
             <p>
-              HTML has evolved from just basic text structure to supporting
-              multimedia, animations, forms, and much more. Today's HTML5 can
-              handle everything from simple text to complex web applications!
+              HTML 4.0 brought us better forms and tables, but Berners-Lee had
+              bigger dreams - the "Semantic Web." He wanted web pages to be
+              machine-readable, not just human-readable. This vision led to
+              concepts like metadata, microformats, and eventually the modern
+              approach to structured data that powers search engines today.
             </p>
+            <div className="future-vision">
+              <strong>🔮 The Dream:</strong> Machines that could understand web
+              content the way humans do, making information truly interconnected
+              and discoverable.
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>📱 HTML5 & Modern Web Renaissance (2004-Present)</h3>
+            <p>
+              After years of XHTML experiments, HTML5 emerged as the modern
+              standard. It wasn't just about new tags - it was about embracing
+              what web developers were actually doing. Canvas for graphics,
+              video/audio support, local storage, and semantic elements that
+              actually made sense! HTML5 proved that sometimes the best solution
+              is the simplest one.
+            </p>
+            <div className="html5-powers">
+              <div className="power">Drawing: &lt;canvas&gt;</div>
+              <div className="power">Media: &lt;video&gt;, &lt;audio&gt;</div>
+              <div className="power">Storage: LocalStorage</div>
+              <div className="power">
+                Structure: &lt;article&gt;, &lt;section&gt;
+              </div>
+            </div>
           </div>
         </div>
       ),
       overview:
-        "In this lesson, we'll explore the fundamentals of HTML including tags, elements, attributes, and document structure. We'll take a journey through the history of the web and learn how HTML became the backbone of the internet!",
+        "Master the building blocks of the web! This comprehensive lesson covers HTML document structure, semantic elements, forms, multimedia, and accessibility. You'll learn how HTML evolved from Tim Berners-Lee's original vision to today's powerful, semantic markup language that powers everything from simple web pages to complex web applications.",
       videoId: "UB1O30fR-EE",
     },
     2: {
@@ -90,77 +133,136 @@ const Quiz = () => {
       history: () => (
         <div className="lesson-history">
           <div className="timeline-item animate-on-scroll">
-            <h3>🎨 The Style Crisis of the 90s</h3>
+            <h3>😰 The Great Web Design Disaster (1993-1995)</h3>
             <p>
-              Imagine being a web designer in 1995. You had HTML for structure,
-              but every single piece of styling had to be done with HTML tags.
-              Want a red text? You'd use <code>&lt;font color="red"&gt;</code>.
-              Wanted bold text? <code>&lt;b&gt;</code>! This was a designer's
-              nightmare!
+              The early web was ugly - really ugly! HTML gave you structure, but
+              styling was an afterthought. Designers had to use deprecated tags
+              like <code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>, and
+              <code>&lt;bgcolor&gt;</code>. The "Designer's Nightmare" was real:
+              mixing content with presentation made websites impossible to
+              maintain and inaccessible to users with disabilities.
             </p>
-            <div className="code-nightmare">
+            <div className="nightmare-code">
               <pre>
                 <code>
-                  <font face="Arial" size="12" color="blue">
-                    <b>Styled Text</b>{" "}
-                  </font>
+                  &lt;body bgcolor="#000000" text="#FFFFFF"&gt; &lt;font
+                  face="Arial" size="16" color="#FF0000"&gt; &lt;center&gt;Ugly
+                  Web Design!&lt;/center&gt; &lt;/font&gt; &lt;/body&gt;
                 </code>
               </pre>
-              <p className="caption">😱 This was actual web design in 1995!</p>
+              <p className="caption">
+                😱 This was considered "good design" in 1994!
+              </p>
             </div>
           </div>
 
           <div className="timeline-item animate-on-scroll">
-            <h3>🧙‍♂️ Håkon's Magic Solution (1994)</h3>
+            <h3>💡 The Norwegian Visionary (1994)</h3>
             <p>
-              Enter Håkon Wium Lie, a Norwegian computer scientist who had this
-              radical idea: "What if we separated content from design?" While
-              working with Tim Berners-Lee at CERN, he proposed "Cascading Style
-              Sheets" - a way to keep HTML clean and handle all styling
-              separately.
+              Håkon Wium Lie, working alongside Tim Berners-Lee at CERN, had an
+              epiphany: "Web pages should be like newspaper articles - the same
+              content can be formatted differently for different contexts!" He
+              proposed Cascading Style Sheets, where styling information could
+              be separate from content structure.
             </p>
-            <div className="innovation-highlight">
-              <strong>💡 The Lightbulb Moment:</strong> Håkon realized that web
-              pages could maintain the same HTML structure but look completely
-              different through CSS - just like how a newspaper can be printed
-              in black & white or full color!
+            <div className="vision-moment">
+              <strong>🌟 The "Aha!" Moment:</strong> "What if we could write
+              once and style anywhere?" This simple question would revolutionize
+              web design forever.
             </div>
           </div>
 
           <div className="timeline-item animate-on-scroll">
-            <h3>🔥 Browser Support Drama (1996-2000)</h3>
+            <h3>📜 The W3C Steps In (1994-1996)</h3>
             <p>
-              CSS Level 1 became official in 1996, but browsers were sloooow to
-              support it. Internet Explorer 3 had "partial" CSS support that was
-              mostly broken! Web developers had to create CSS that worked AND
-              create HTML fallbacks for older browsers.
+              Recognizing the chaos, the World Wide Web Consortium (W3C) formed
+              the CSS Working Group. Lie's proposal became the foundation for
+              CSS 1.0, which was officially released in December 1996. But the
+              real challenge was getting browsers to implement it correctly - a
+              problem that would haunt developers for years!
             </p>
-            <div className="browser-war">
-              <div className="browser-icon">IE3</div>
-              <span>vs</span>
-              <div className="browser-icon">CSS</div>
-              <span>Result:</span>
-              <div className="loser">😵 Nightmare Mode Activated</div>
+            <div className="standards-birth">
+              <div className="w3c-moment">
+                <strong>🎯 The Goal:</strong> Create a standard way to style web
+                pages that works across all browsers and devices.
+              </div>
             </div>
           </div>
 
           <div className="timeline-item animate-on-scroll">
-            <h3>🎯 CSS Gets Super Powers (2000-2010)</h3>
+            <h3>🛠️ Browser Support Struggles (1996-2001)</h3>
             <p>
-              CSS2 in 1998 added positioning and media types. But the real
-              game-changer? CSS3 (starting 1999) brought us animations,
-              transitions, gradients, and flexbox. Suddenly, web designers could
-              create animations without JavaScript!
+              Internet Explorer 3's CSS support was famously buggy. IE 4
+              improved things but still had quirks. Netscape 4 was almost
+              unusable with CSS. Developers created elaborate workarounds and
+              browser-detection scripts. The "CSS Box Model Hack" became an art
+              form! This era taught developers the importance of progressive
+              enhancement.
             </p>
-            <div className="evolution-demo">
-              <div className="css-box">Basic</div>
-              <div className="css-box animated">With Animations!</div>
+            <div className="browser-quirks">
+              <div className="quirk">
+                <strong>IE Box Model Bug:</strong> Width included padding
+              </div>
+              <div className="quirk">
+                <strong>Netscape 4:</strong> Ignored most CSS properties
+              </div>
+              <div className="quirk">
+                <strong>Solution:</strong> CSS hacks and browser detection
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🚀 CSS2 & Positioning Revolution (1998-2005)</h3>
+            <p>
+              CSS2 brought us absolute positioning, z-index, media queries, and
+              @import rules. But the real breakthrough was when designers
+              discovered CSS could replace table-based layouts. Float-based
+              layouts became the new standard, leading to cleaner, more semantic
+              HTML. This was the beginning of modern web design!
+            </p>
+            <div className="layout-evolution">
+              <div className="layout-stage">
+                <strong>Tables for Layout (1995-2000)</strong>
+                <p>Messy, inaccessible, slow</p>
+              </div>
+              <div className="arrow">➡️</div>
+              <div className="layout-stage">
+                <strong>CSS Float Layouts (2000-2005)</strong>
+                <p>Cleaner, faster, more flexible</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item animate-on-scroll">
+            <h3>🎨 CSS3 & The Design Renaissance (2005-Present)</h3>
+            <p>
+              CSS3 wasn't just an upgrade - it was a complete transformation!
+              Gradients, shadows, animations, transforms, flexbox, and grid
+              systems turned CSS into a powerful design tool. Suddenly, you
+              could create complex layouts and animations without JavaScript.
+              The web became as beautiful as native applications!
+            </p>
+            <div className="css3-showcase">
+              <div className="css3-feature">
+                <strong>🎨 Visual Effects:</strong> Gradients, shadows, borders
+              </div>
+              <div className="css3-feature">
+                <strong>📐 Layout Systems:</strong> Flexbox, Grid, Subgrid
+              </div>
+              <div className="css3-feature">
+                <strong>🎬 Animations:</strong> Transitions, keyframes,
+                transforms
+              </div>
+              <div className="css3-feature">
+                <strong>📱 Responsive:</strong> Media queries, container queries
+              </div>
             </div>
           </div>
         </div>
       ),
       overview:
-        "This lesson covers CSS syntax, selectors, properties, and the box model. You'll discover how CSS saved web design from the chaos of HTML styling tags and learn to create beautiful, responsive websites.",
+        "Transform plain HTML into stunning, responsive designs! This deep dive into CSS covers selectors, the box model, layout systems (Flexbox & Grid), animations, responsive design, and modern CSS features. Learn how CSS evolved from a simple styling language to the powerful design tool that creates the beautiful web experiences we enjoy today.",
       videoId: "yfoY53QXEnI",
     },
     3: {
@@ -1504,7 +1606,7 @@ const Quiz = () => {
   // Mock quiz data - in a real app, this would come from an API
   const quizData = {
     1: [
-      // HTML Basics
+      // HTML Basics - 15 unique questions
       {
         question: "What does HTML stand for?",
         options: [
@@ -1516,38 +1618,115 @@ const Quiz = () => {
         correct: 0,
       },
       {
-        question: "Which tag is used to create a paragraph in HTML?",
-        options: ["<p>", "<para>", "<text>", "<pg>"],
+        question: "Which HTML tag is used to create the largest heading?",
+        options: ["<h6>", "<heading>", "<h1>", "<header>"],
+        correct: 2,
+      },
+      {
+        question: "What is the purpose of the DOCTYPE declaration?",
+        options: [
+          "To define the document type and version of HTML",
+          "To create a hyperlink to external resources",
+          "To specify the character encoding",
+          "To define CSS styles for the document",
+        ],
         correct: 0,
       },
       {
-        question: "What is the purpose of the <head> tag in HTML?",
+        question: "Which attribute provides alternative text for images?",
+        options: ["title", "src", "alt", "description"],
+        correct: 2,
+      },
+      {
+        question: "What is the difference between <div> and <span> elements?",
         options: [
-          "To display the main content",
-          "To contain metadata about the document",
-          "To create a header section",
-          "To define the body",
+          "<div> is inline, <span> is block-level",
+          "<div> is block-level, <span> is inline",
+          "They are exactly the same",
+          "<div> is for text, <span> is for images",
         ],
         correct: 1,
       },
       {
-        question: "Which tag is used to create a hyperlink in HTML?",
+        question: "Which tag creates a hyperlink in HTML?",
         options: ["<link>", "<a>", "<href>", "<url>"],
         correct: 1,
       },
       {
-        question: "What does the <br> tag do?",
+        question: "What does the <meta charset='UTF-8'> tag do?",
         options: [
-          "Creates a bold text",
-          "Inserts a line break",
-          "Defines a paragraph",
-          "Creates a button",
+          "Sets the character encoding for the document",
+          "Creates a new CSS style",
+          "Defines the document title",
+          "Links to an external stylesheet",
+        ],
+        correct: 0,
+      },
+      {
+        question: "Which element is used to create an unordered list?",
+        options: ["<ol>", "<ul>", "<li>", "<list>"],
+        correct: 1,
+      },
+      {
+        question: "What is semantic HTML?",
+        options: [
+          "HTML that describes the meaning of the content",
+          "HTML that makes websites load faster",
+          "HTML with embedded JavaScript",
+          "HTML that only works on mobile devices",
+        ],
+        correct: 0,
+      },
+      {
+        question:
+          "Which attribute is used to specify the destination of a link?",
+        options: ["link", "href", "src", "target"],
+        correct: 1,
+      },
+      {
+        question: "What is the purpose of the <head> section in HTML?",
+        options: [
+          "To display the main content of the page",
+          "To contain metadata and links to external resources",
+          "To create the page footer",
+          "To define the navigation menu",
         ],
         correct: 1,
       },
+      {
+        question:
+          "Which HTML5 element is used to represent independent content?",
+        options: ["<div>", "<article>", "<section>", "<aside>"],
+        correct: 1,
+      },
+      {
+        question: "What does the <br> element do?",
+        options: [
+          "Creates a bold text effect",
+          "Inserts a line break",
+          "Creates a button",
+          "Defines a section",
+        ],
+        correct: 1,
+      },
+      {
+        question: "Which attribute opens a link in a new browser tab/window?",
+        options: ["new", "open", "target='_blank'", "window"],
+        correct: 2,
+      },
+      {
+        question: "What is the correct HTML for creating a table?",
+        options: [
+          "<table><tr><td>Cell</td></tr></table>",
+          "<tab><row><col>Cell</col></row></tab>",
+          "<tbl><r><c>Cell</c></r></tbl>",
+          "<table><row><cell>Cell</cell></row></table>",
+        ],
+        correct: 0,
+      },
     ],
     2: [
-      // CSS Styling
+      // CSS Styling - 15 unique questions
       {
         question: "What does CSS stand for?",
         options: [
@@ -1559,14 +1738,14 @@ const Quiz = () => {
         correct: 2,
       },
       {
-        question: "Which property is used to change the background color?",
-        options: ["color", "bgcolor", "background-color", "bg-color"],
+        question: "Which CSS property changes the text color?",
+        options: ["font-color", "text-color", "color", "font-style"],
         correct: 2,
       },
       {
-        question: "How do you select an element with id 'myId' in CSS?",
-        options: ["#myId", ".myId", "myId", "*myId"],
-        correct: 0,
+        question: "How do you select an element with class 'my-class' in CSS?",
+        options: ["#my-class", ".my-class", "my-class", "*my-class"],
+        correct: 1,
       },
       {
         question: "What is the difference between margin and padding?",
@@ -1579,6 +1758,11 @@ const Quiz = () => {
         correct: 1,
       },
       {
+        question: "Which CSS property is used to change the font size?",
+        options: ["text-size", "font-style", "font-size", "size"],
+        correct: 2,
+      },
+      {
         question: "How do you make text bold in CSS?",
         options: [
           "font-weight: bold;",
@@ -1588,16 +1772,94 @@ const Quiz = () => {
         ],
         correct: 0,
       },
-    ],
-    3: [
-      // JavaScript Fundamentals
       {
-        question: "Which keyword is used to declare a variable in JavaScript?",
-        options: ["var", "let", "const", "All of the above"],
-        correct: 3,
+        question: "Which CSS display value makes elements appear in a row?",
+        options: ["block", "inline", "flex", "grid"],
+        correct: 2,
       },
       {
-        question: "What is the correct way to write a comment in JavaScript?",
+        question: "What is CSS Grid used for?",
+        options: [
+          "Styling text",
+          "Creating two-dimensional layouts",
+          "Adding animations",
+          "Changing colors",
+        ],
+        correct: 1,
+      },
+      {
+        question:
+          "Which CSS property controls the space between lines of text?",
+        options: [
+          "line-height",
+          "letter-spacing",
+          "word-spacing",
+          "text-spacing",
+        ],
+        correct: 0,
+      },
+      {
+        question: "How do you make a CSS rule more specific?",
+        options: [
+          "Add more selectors",
+          "Use !important",
+          "Both of the above",
+          "You can't change specificity",
+        ],
+        correct: 2,
+      },
+      {
+        question: "What does the CSS z-index property control?",
+        options: [
+          "The vertical position of an element",
+          "The stacking order of elements",
+          "The zoom level of an element",
+          "The size of an element",
+        ],
+        correct: 1,
+      },
+      {
+        question: "Which CSS unit is relative to the root element's font size?",
+        options: ["px", "em", "rem", "%"],
+        correct: 2,
+      },
+      {
+        question: "What is the CSS box model?",
+        options: [
+          "A way to calculate total element size including margin, border, padding, and content",
+          "A CSS layout system",
+          "A way to create rounded corners",
+          "A method for centering elements",
+        ],
+        correct: 0,
+      },
+      {
+        question:
+          "Which CSS pseudo-class targets elements when you hover over them?",
+        options: [":active", ":focus", ":hover", ":visited"],
+        correct: 2,
+      },
+      {
+        question: "What is the purpose of CSS media queries?",
+        options: [
+          "To create animations",
+          "To apply styles based on device characteristics",
+          "To style print documents",
+          "To create responsive layouts",
+        ],
+        correct: 1,
+      },
+    ],
+    3: [
+      // JavaScript Fundamentals - 15 unique questions
+      {
+        question: "Which keyword is used to declare a block-scoped variable?",
+        options: ["var", "let", "const", "All of the above"],
+        correct: 1,
+      },
+      {
+        question:
+          "What is the correct way to write a single-line comment in JavaScript?",
         options: [
           "// This is a comment",
           "/* This is a comment */",
@@ -1612,7 +1874,7 @@ const Quiz = () => {
         correct: 2,
       },
       {
-        question: "How do you declare a function in JavaScript?",
+        question: "How do you declare a function named myFunction?",
         options: [
           "function myFunction() {}",
           "def myFunction() {}",
@@ -1624,10 +1886,91 @@ const Quiz = () => {
       {
         question: "What is an array in JavaScript?",
         options: [
-          "A single value",
-          "A collection of elements",
+          "A single value container",
+          "A collection of elements ordered by index",
           "A type of loop",
           "A conditional statement",
+        ],
+        correct: 1,
+      },
+      {
+        question: "Which method adds an element to the end of an array?",
+        options: ["push()", "add()", "append()", "insert()"],
+        correct: 0,
+      },
+      {
+        question: "What does === operator do in JavaScript?",
+        options: [
+          "Assigns a value to a variable",
+          "Compares both value and type",
+          "Compares only values",
+          "Checks if two values are not equal",
+        ],
+        correct: 1,
+      },
+      {
+        question: "Which loop is used to iterate over object properties?",
+        options: ["for loop", "while loop", "for...in loop", "do...while loop"],
+        correct: 2,
+      },
+      {
+        question: "What is the purpose of the return statement in a function?",
+        options: [
+          "To stop the function execution",
+          "To exit the function and return a value",
+          "To continue to the next iteration",
+          "To throw an error",
+        ],
+        correct: 1,
+      },
+      {
+        question:
+          "How do you access the first element of an array named myArray?",
+        options: [
+          "myArray[0]",
+          "myArray.first",
+          "myArray(0)",
+          "myArray.get(0)",
+        ],
+        correct: 0,
+      },
+      {
+        question: "What is the result of 5 + '5' in JavaScript?",
+        options: ["10", "'55'", "NaN", "Error"],
+        correct: 1,
+      },
+      {
+        question: "Which method converts a JSON string to a JavaScript object?",
+        options: [
+          "JSON.stringify()",
+          "JSON.parse()",
+          "Object.parse()",
+          "parseJSON()",
+        ],
+        correct: 1,
+      },
+      {
+        question: "What does the isNaN() function do?",
+        options: [
+          "Checks if a value is a number",
+          "Checks if a value is not a number",
+          "Converts a value to a number",
+          "Rounds a number to the nearest integer",
+        ],
+        correct: 1,
+      },
+      {
+        question: "Which event occurs when a user clicks on an HTML element?",
+        options: ["mouseover", "click", "change", "submit"],
+        correct: 1,
+      },
+      {
+        question: "What is the purpose of the DOM (Document Object Model)?",
+        options: [
+          "To style HTML elements",
+          "To provide a programming interface for HTML and XML documents",
+          "To create animations",
+          "To handle form submissions",
         ],
         correct: 1,
       },
